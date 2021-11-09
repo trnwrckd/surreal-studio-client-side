@@ -1,38 +1,51 @@
 .App {
   text-align: center;
+  padding-bottom: 100px;
+  background-color: #efefef;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* margin for navbar */
+.mt-nav{
+  margin-top: 60px;
+  padding-top: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* generic btn variant */
+
+.btn-generic{
+    background-color: rgb(131, 162, 248);
+    color: black;
+    padding: 5px 20px;
+    border: none;
+    letter-spacing: 1.5px;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-generic:before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  bottom: -100%;
+  left: 0;
+  border-radius: 25px;
+  background-color:rgb(255, 183, 183);
+  transition: all .5s;
 }
-
-.App-link {
-  color: #61dafb;
+.btn-generic:hover{
+  box-shadow: 0px 0px 5px rgb(141, 141, 141);
+  color: black;
 }
+.btn-generic:hover:before{
+  bottom: 0;
+}
+  
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* for Rating */
+.icon-color{
+  color: #ff2c37;
 }
