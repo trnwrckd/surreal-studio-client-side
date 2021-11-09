@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
   background-color: #efefef;
 }
 
@@ -12,6 +12,11 @@
 /* padding to fix footer */
 .py-fit{
   padding: 12em 0;
+}
+
+/* for all navigation */
+.bg-nav{
+   background: #141212;
 }
 
 /* text color */
@@ -32,6 +37,21 @@
 }
 [data-col = "blue"]:hover{
   color: rgb(150, 255, 137);
+}
+
+/* redirect to reg/login text*/
+.redirect , .redirect-register{
+    color: #dc3535; 
+    letter-spacing: .5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+.redirect-register{
+  color: rgb(25, 107, 22);
+}
+.redirect:hover , .redirect-register:hover{
+    color: navy;
 }
 
 /* generic btn variant */

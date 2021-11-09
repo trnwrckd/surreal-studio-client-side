@@ -3,9 +3,7 @@ import Home from './Pages/Home/Home/Home.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Register from './Pages/Register/Register';
 import Login from './Pages/Login/Login';
-import Header from './Shared/Header/Header';
 import NotFound from './Pages/NotFound/NotFound';
-import Footer from './Shared/Footer/Footer';
 import AuthProvider from './Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore';
@@ -15,7 +13,6 @@ function App() {
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
           <Switch>
 
             <Route exact path='/'>
@@ -49,7 +46,6 @@ function App() {
 
           </Switch>
 
-          <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>

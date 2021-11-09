@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import {useAuth} from '../../Hooks/useAuth'
+import { useAuth } from '../../Hooks/useAuth';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 import './Header.css';
@@ -8,7 +9,7 @@ const Header = () => {
     const { logOut, user, isLoading } = useAuth();
 
     return (
-        <div className="custom-nav fixed-top">
+        <div className="custom-nav bg-nav fixed-top">
             <nav className="navbar navbar-expand-lg navbar-dark">
                 <div className="container-fluid px-3 d-flex align-items-center">
                     
@@ -42,7 +43,7 @@ const Header = () => {
                                             {!isLoading && <span className="fs-6 mx-2">{user.displayName}</span>}
                                         </li>
                                         <li className="nav-item mb-2 mb-lg-0">
-                                            <button className='btn-logout' onClick={logOut}><i className="fas fa-sign-out-alt ms-1"></i>
+                                            <button className='btn btn-light' onClick={logOut}><LogoutIcon></LogoutIcon>
                                             </button>
                                         </li>
                                     </>

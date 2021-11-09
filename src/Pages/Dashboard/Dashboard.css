@@ -1,0 +1,21 @@
+.back-to-home-btn{
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: color .5s;
+}
+.back-to-home-btn:hover{
+    color: #ff8771;
+}
+
+.side-nav-common{
+    text-decoration: none;
+    color: black;
+    transition: all .5s;
+}
+.side-nav-common:hover{
+    color: gold;
+}
+.side-nav-active{
+    color: rgb(255, 120, 96);
+}
