@@ -9,19 +9,51 @@
   margin-top: 60px;
   padding-top: 15px;
 }
+/* padding to fix footer */
+.py-fit{
+  padding: 12em 0;
+}
+
+/* text color */
+[data-col]{
+  transition: all .5s;
+}
+[data-col]:hover{
+  color: white;  
+}
+[data-col = "gold"]{
+  color: gold;
+}
+[data-col = "gold"]:hover{
+  color: rgb(255, 136, 67);
+}
+[data-col = "blue"]{
+  color: rgb(157, 157, 255);
+}
+[data-col = "blue"]:hover{
+  color: rgb(150, 255, 137);
+}
 
 /* generic btn variant */
 
 .btn-generic{
-    background-color: rgb(131, 162, 248);
+    background-color: rgb(8, 8, 8);
+    background-color: white;
     color: black;
+    border: 2px solid black;
     padding: 5px 20px;
-    border: none;
+    font-weight: 500;
     letter-spacing: 1.5px;
     border-radius: 25px;
     position: relative;
     z-index: 1;
     overflow: hidden;
+    transition: all .4s;
+}
+
+.btn-generic:hover{
+  transform: scale(1.03);
+  /* color: black; */
 }
 
 .btn-generic:before{
@@ -30,20 +62,35 @@
   width: 100%;
   height: 100%;
   z-index: -1;
-  bottom: -100%;
-  left: 0;
-  border-radius: 25px;
-  background-color:rgb(255, 183, 183);
+  left: -100%;
+  top: 0;
+  opacity: 0;
+  /* border-radius: 0p; */
+  background-color:rgb(255, 230, 92);
   transition: all .5s;
 }
-.btn-generic:hover{
-  box-shadow: 0px 0px 5px rgb(141, 141, 141);
-  color: black;
-}
 .btn-generic:hover:before{
-  bottom: 0;
+  left: -50%;
+  opacity: .5;
 }
-  
+.btn-generic:after{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  right: -100%;
+  top: 0;
+  opacity: 0;
+  /* border-radius: 0p; */
+  background-color:rgb(136, 167, 255);
+  transition: all .5s;
+}
+.btn-generic:hover:after{
+  right: -50%;
+  opacity: .5;
+}
+
 
 /* for Rating */
 .icon-color{
