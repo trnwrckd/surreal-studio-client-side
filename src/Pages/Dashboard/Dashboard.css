@@ -1,3 +1,14 @@
+.sidenav{
+    height: 100%;
+    color: white;
+    background-color: rgba(17, 0, 77, 0.699);
+    background-image: url('https://i.pinimg.com/originals/b5/58/1b/b5581b2c743b5542d20ce68cfd7b8c6f.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
 .back-to-home-btn{
     border: none;
     background-color: transparent;
@@ -10,12 +21,14 @@
 
 .side-nav-common{
     text-decoration: none;
-    color: black;
+    color: white;
+    cursor:pointer;
     transition: all .5s;
 }
 .side-nav-common:hover{
-    color: gold;
+    color: #ff8771;
 }
 .side-nav-active{
-    color: rgb(255, 120, 96);
+    color: gold;
+    letter-spacing: 1.3px;
 }

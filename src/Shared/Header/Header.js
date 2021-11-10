@@ -43,8 +43,8 @@ const Header = () => {
                                             {!isLoading && <span className="fs-6 mx-2">{user.displayName}</span>}
                                         </li>
                                         <li className="nav-item mb-2 mb-lg-0">
-                                            <button className='btn btn-light' onClick={logOut}><LogoutIcon></LogoutIcon>
-                                            </button>
+                                            <span className='common' onClick={logOut}><LogoutIcon></LogoutIcon>
+                                            </span>
                                         </li>
                                     </>
 

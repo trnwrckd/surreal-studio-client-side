@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 2,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 3,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 4,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 5,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 6,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 7,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 8,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 9,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    },
+    {
+        "id": 10,
+        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
+        "artistName" : "Elba Rhea",
+        "artistLocation" : "France",
+        "price" : 2000
+    }
+]

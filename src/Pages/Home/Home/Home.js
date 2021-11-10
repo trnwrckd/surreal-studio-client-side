@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <>
             <Header />
-            <div className="mt-nav py-fit">
+            <div className="mt-nav">
                 <Banner/>
                 <Products/>
                 <Reviews/>

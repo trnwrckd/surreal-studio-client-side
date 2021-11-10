@@ -22,9 +22,11 @@
     letter-spacing: .5px;
     text-decoration: none;
     overflow: hidden;
+    cursor: pointer;
     z-index: 1;
     border-bottom: .5px solid transparent;
     position: relative;
+    transition: all .5s;
 }
 .common:before{
     content: '';
@@ -42,12 +44,12 @@
 
 
 .active{
-    color: #ffa292;
+    color: gold;
 }
 a{
     color: rgb(255, 255, 255);
     transition: color .5s;
 }
-a:hover , #navbarDropdown:hover{
+a:hover , #navbarDropdown:hover , .common:hover{
     color: #ff8771;
 }

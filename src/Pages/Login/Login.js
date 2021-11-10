@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import './Login.css';
 import {useHistory , useLocation } from 'react-router-dom';
 import { useAuth } from '../../Hooks/useAuth';
+import Header from '../../Shared/Header/Header';
+import Footer from '../../Shared/Footer/Footer';
 
 const Login = () => {
     const history = useHistory();
@@ -26,7 +28,9 @@ const Login = () => {
         history.push('/register');
     }
     return (
-        <div className="login-bg py-5 mt-nav">
+        <>
+            <Header></Header>
+            <div className="login-bg py-5 mt-nav">
             <div className="container d-flex flex-column flex-md-row justify-content-around align-items-center">
                 <div className="d-flex flex-column justify-content-center login px-3 py-4">
                     <h1 className="mb-4">Login</h1>
@@ -62,7 +66,9 @@ const Login = () => {
 
             </div>
 
-        </div>
+            </div>
+            <Footer></Footer>
+        </>
     );
 };
 

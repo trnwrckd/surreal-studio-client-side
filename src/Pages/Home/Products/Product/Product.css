@@ -1,0 +1,36 @@
+.art-container{
+    position: relative;
+    overflow: hidden;
+}
+.art-info{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* z-index: 2; */
+    top: 0;
+    background: rgba(251, 255, 198, 0.473);
+    transition: all .8s;
+    left: -100%;
+}
+.art-container:hover .art-info{
+    left: 0px;
+}
+
+.btn-buy{
+    position: absolute;
+    bottom: 0;
+    color: black;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+    border: none;
+    background: rgba(255, 129, 112, 0.664);
+    backdrop-filter: blur(2px);
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    right: 0;
+    padding: 5px 20px;
+    transition: all .5s;
+}
+.btn-buy:hover{
+    background: rgba(255, 255, 255, 0.664);
+}

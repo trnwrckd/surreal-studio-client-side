@@ -7,11 +7,10 @@
 /* margin for navbar */
 .mt-nav{
   margin-top: 60px;
-  padding-top: 15px;
 }
 /* padding to fix footer */
 .py-fit{
-  padding: 12em 0;
+  padding: 7em 0;
 }
 
 /* for all navigation */
@@ -22,6 +21,7 @@
 /* text color */
 [data-col]{
   transition: all .5s;
+  cursor: pointer;
 }
 [data-col]:hover{
   color: white;  
@@ -37,6 +37,9 @@
 }
 [data-col = "blue"]:hover{
   color: rgb(150, 255, 137);
+}
+[data-col = "dark-blue"]{
+  color: rgb(22, 2, 78);
 }
 
 /* redirect to reg/login text*/
