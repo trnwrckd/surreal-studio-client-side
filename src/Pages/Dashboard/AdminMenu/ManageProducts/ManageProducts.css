@@ -1,0 +1,20 @@
+.prod-img{
+    width: 100%;
+    height: 100%;    
+}
+.prod-img > img{
+    width: 100%;
+}
+
+.prod-info{
+    background-color: rgb(42, 36, 63);
+    font-family: 'PT Sans' , sans-serif;
+    color: white;
+    width: 100%;
+}
+
+@media screen and (max-width : 768px) {
+    .prod-img > img{
+        height: 100%;
+    }
+}

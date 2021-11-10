@@ -58,7 +58,9 @@ function Dashboard(props) {
     const drawer = (
         <div className=" sidenav text-light">
             <Toolbar/>
-            <h5 className="d-flex justify-content-center">Dashboard</h5>
+            <NavLink to='/dashboard' className="side-nav-common">
+                <h5 className="d-flex justify-content-center">Dashboard</h5>
+            </NavLink>
             <Divider />
             <div className=" py-5 my-5 d-flex flex-column justify-content-end align-items-center">
 

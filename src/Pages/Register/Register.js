@@ -1,4 +1,5 @@
 import './Register.css';
+import bg from '../../images/login-reg-bg.png';
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
@@ -8,34 +9,35 @@ import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
 
 const Register = () => {
-    const { handleSubmit, register, formState: { errors } } = useForm();
+    const { handleSubmit, register, formState: { errors } , clearErrors } = useForm();
     const redirectURL = '/';
 
     const history = useHistory();
     const { googleSignin , emailRegister , error} = useAuth();
     
     const onSubmit = (data) => {
+        clearErrors();
         const { name, email, password } = data;
         emailRegister(name, email , password , redirectURL , history)
     }
-
+    
     const handleGoogleSignin = () => {
+        clearErrors();
         googleSignin(redirectURL , history);
     }
-
+    
     const redirectToLogin = () => {
+        clearErrors();
         history.push('/login');
     }
     return (
         <>
             <Header></Header>
-            <div className="register-bg py-5 mt-nav">
+            <div className="register-bg py-5 mt-nav" style = {{ backgroundImage : `url('${bg}')`}}>
                 <div className="container d-flex flex-column flex-md-row justify-content-center align-items-center">
 
-                    <div></div>
-
                     <div className="d-flex flex-column register px-3 py-4">
-                        <h1 className="mb-4">Register</h1>
+                        <h1 className="mb-4 text-light">Register</h1>
                         <form onSubmit={handleSubmit(onSubmit)} className="form-group">
                             <div className="form-floating mb-2">
                                 <input className="form-control px-5" type="text" placeholder="Name" id="name" {...register("name", { required: "Name is required" })} />
@@ -69,7 +71,7 @@ const Register = () => {
                             </button>
                         </div>
 
-                        <p className="redirect-register pt-3 fw-bold" onClick={redirectToLogin}>Already have an account?</p>
+                        <p className="redirect-register pt-3 " onClick={redirectToLogin}>Already have an account?</p>
 
                     </div>
                 </div>

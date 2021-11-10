@@ -2,6 +2,7 @@
   text-align: center;
   /* padding-bottom: 100px; */
   background-color: #efefef;
+  background-color: #fff1f1;
 }
 
 /* margin for navbar */
@@ -50,20 +51,27 @@
 [data-col = "dark-blue"]{
   color: rgb(22, 2, 78);
 }
+[data-col = "light-red"]{
+  color: rgb(255, 129, 129);
+}
+[data-col = "light-green"]{
+  color: rgb(167, 255, 171);
+}
 
 /* redirect to reg/login text*/
 .redirect , .redirect-register{
-    color: #dc3535; 
+    color: #ffdb79; 
     letter-spacing: .5px;
     cursor: pointer;
     font-size: 1.2rem;
+    /* font-weight: 300; */
     transition: all .5s;
 }
 .redirect-register{
-  color: rgb(25, 107, 22);
+  color: rgb(152, 255, 148);
 }
 .redirect:hover , .redirect-register:hover{
-    color: navy;
+    color: rgb(245, 245, 245);
 }
 
 /* generic btn variant */
@@ -74,7 +82,8 @@
     color: black;
     border: 2px solid black;
     padding: 5px 20px;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: "Oswald" , sans-serif !important;
     letter-spacing: 1.5px;
     border-radius: 25px;
     position: relative;

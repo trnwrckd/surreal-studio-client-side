@@ -74,7 +74,7 @@ const AddReview = () => {
                     >
                     </Rating>
                     <input type="hidden" {... register("rating")} />
-                    <input type="hidden" {... register("displayImage")} />
+                    <input type="hidden" {... register("image")} />
 
                     <div className="mt-3"><button className="btn-generic btn-blue">
                             Proceed

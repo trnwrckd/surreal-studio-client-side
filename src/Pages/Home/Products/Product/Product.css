@@ -4,17 +4,22 @@
 }
 .art-info{
     position: absolute;
+    cursor: pointer;
     height: 100%;
     width: 100%;
-    /* z-index: 2; */
     top: 0;
-    background: rgba(251, 255, 198, 0.473);
+    background: rgba(255, 213, 179, 0.473);
     transition: all .8s;
     left: -100%;
+}
+.art-info-overlay{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.37);
 }
 .art-container:hover .art-info{
     left: 0px;
 }
+
 
 .btn-buy{
     position: absolute;

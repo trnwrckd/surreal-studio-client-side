@@ -35,25 +35,24 @@ const Purchase = () => {
 
         data.orderStatus = "Pending";
 
-        console.log(data);
         axios.post('http://localhost:5000/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     notify();
                     reset();
                 }
-            })
+            });
     }
 
     return (
         <>
             <Header></Header>
             <div className="mt-nav py-5">
-                <div className="container">
+                <div className="container py-5">
                 <div className="row row-cols-1 row-cols-md-2 g-5">
                     <div className="col order-md-2">
                         <div>
-                                <img src={product?.image} className="img-fluid" alt=""/>
+                                <img src={product?.image} className="img-fluid" height="400px" width="280px" alt=""/>
                         </div>
                     </div>
                     <div className="col order-md-1 d-flex flex-column justify-content-center">

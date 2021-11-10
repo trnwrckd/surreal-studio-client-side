@@ -17,14 +17,18 @@ const Product = (props) => {
 
 
     return (
-        <div className="col">
+        <div className="col my-auto py-2">
             <div className="art-container">
                 <div className="art-info d-flex flex-column justify-content-center align-items-center">
-                    <h1> {artistName}</h1>
-                    <h3 className="d-flex align-items-center my-3"><PersonPinIcon sx={{ fontSize:'h4.fontSize'}}></PersonPinIcon> {artistLocation}</h3>
-                    <h3 className="d-flex align-items-center" data-col="dark-blue"><AttachMoneyIcon sx={{ fontSize:'h4.fontSize'}}></AttachMoneyIcon> {price}</h3>
+                    <div className="art-info-overlay w-100 d-flex flex-column align-items-center">
+                        <h1> {artistName}</h1>
+                        <h3 className="d-flex align-items-center my-3"><PersonPinIcon sx={{ fontSize:'h4.fontSize'}}></PersonPinIcon> {artistLocation}</h3>
+                        <h3 className="d-flex align-items-center"><AttachMoneyIcon sx={{ fontSize:'h4.fontSize'}}></AttachMoneyIcon> {price}</h3>
+                    </div>
                 </div>
+                
                 <img className="img-fluid"  src={image} alt="" />
+                
                 <button className="btn-buy" onClick={ ()=>{redirectToPurchase(_id)}}> Buy Now</button>
             </div>    
         </div>
