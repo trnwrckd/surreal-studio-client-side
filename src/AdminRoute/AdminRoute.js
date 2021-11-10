@@ -1,13 +1,13 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { useAuth } from '../Hooks/useAuth';
-import Loader from '../Shared/Loader/Loader';
+import Loading from '../Shared/Loading/Loading';
 
 const AdminRoute = ({children , ...rest}) => {
     const { user , admin , isLoading } = useAuth();
 
     if (isLoading) {
-        return <Loader></Loader>
+        return <Loading></Loading>
     }
 
     return (

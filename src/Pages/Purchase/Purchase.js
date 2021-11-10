@@ -27,7 +27,7 @@ const Purchase = () => {
             .then(data => setProduct(data));
     }, [id]);
 
-    const notify = () => toast("Order placed Successfully!");
+    const notify = () => toast.info("Order placed Successfully!");
 
     const onSubmit = (data) => {
         data.name = user.displayName;

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Order from '../../../../Shared/Order/Order';
 import { toast, ToastContainer } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
+import Loading from '../../../../Shared/Loading/Loading';
 
 const ManageOrders = () => {
 
@@ -13,13 +14,16 @@ const ManageOrders = () => {
 
     useEffect(() => {
         fetch('http://localhost:5000/orders').then(res => res.json())
-            .then(data => setOrders(data));
+            .then(data => {
+                setOrders(data);
+                setLoaded(true);
+            });
     }, [orders]);
 
 
 // notification for update and delete
-    const delNotify = () => toast("Order Deleted.");
-    const updateNotify = () => toast("Order Approved!");
+    const delNotify = () => toast.error("Order Deleted.");
+    const updateNotify = () => toast.success("Order Approved!");
 
     // delete order
     const handleDeleteOrder = (id) => {
@@ -75,7 +79,18 @@ const ManageOrders = () => {
             })
     }
 
-    return (
+    if (!loaded) return <Loading />
+    
+    else {
+        if (orders.length === 0) {
+            <div className="py-5">
+                <div className="container py-5">
+                    <h2 className="py-5 my-5">No Current Orders</h2>
+                </div>
+            </div>
+        }
+        else {
+            return (
         <div className="fit py-1">
             <h1 className="mb-2"> Manage Orders</h1>
             <ToastContainer/>
@@ -103,6 +118,8 @@ const ManageOrders = () => {
             </div>
         </div>
     );
+        }
+    }
 };
 
 export default ManageOrders;

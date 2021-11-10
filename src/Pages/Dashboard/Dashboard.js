@@ -30,6 +30,7 @@ import { useAuth } from '../../Hooks/useAuth';
 
 import './Dashboard.css';
 import AdminRoute from '../../AdminRoute/AdminRoute';
+import NotFound from '../NotFound/NotFound';
 
 const drawerWidth = 240;
 
@@ -82,7 +83,7 @@ function Dashboard(props) {
                             </li>
                             {/* always */}
                             <li className="my-3 fs-4 nav-item">
-                                <span className="side-nav-common"  onClick={logOut}> Logout</span>
+                                <span className="side-nav-common" onClick={() => { logOut(history) }}> Logout</span>
                             </li>
                         </ul> :
                         <ul className="navbar-nav">
@@ -99,7 +100,7 @@ function Dashboard(props) {
                     </li>
                     {/* always */}
                     <li className="my-3 fs-4 nav-item">
-                        <span className="side-nav-common"  onClick={logOut}> Logout</span>
+                        <span className="side-nav-common"  onClick={()=>{logOut(history)}}> Logout</span>
                     </li>
 
                     
@@ -196,6 +197,9 @@ function Dashboard(props) {
                             <AdminRoute path={`${path}/makeadmin`}>
                                 <MakeAdmin/>
                             </AdminRoute>
+                            <AdminRoute path={`${path}/*`}>
+                                <NotFound/>
+                            </AdminRoute>
                     </Switch>
                         :
                     <Switch>
@@ -210,6 +214,9 @@ function Dashboard(props) {
                         </Route>
                         <Route path={`${path}/myorders`}>
                             <MyOrders/>
+                        </Route>
+                        <Route path={`${path}/*`}>
+                            <NotFound/>
                         </Route>
                     </Switch>    
             }

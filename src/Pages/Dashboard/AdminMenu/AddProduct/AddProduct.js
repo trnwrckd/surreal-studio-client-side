@@ -9,7 +9,9 @@ const AddProduct = () => {
 
     const { handleSubmit, register, formState: { errors }, reset ,clearErrors } = useForm();
 
-    const notify = () => toast("Product Added Successfully!");
+    const notify = () => toast.success("Product Added Successfully!", {
+        theme:"dark"
+    });
 
 
     const onSubmit = (data) => {

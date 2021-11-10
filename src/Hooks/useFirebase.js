@@ -3,6 +3,7 @@ import authInit from '../Firebase/firebase-init';
 import { getAuth, signInWithPopup, signOut, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword , updateProfile} from "firebase/auth";
 import axios from "axios";
 
+
 // initiate authentication
 authInit();
 
@@ -15,6 +16,8 @@ const useFireBase = () => {
     
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider();
+
+
 
     // save user 
     const saveUser = (email, displayName, method = 'post') => {
@@ -86,10 +89,11 @@ const useFireBase = () => {
     }
     
     // logout
-    const logOut = () => {
+    const logOut = (history) => {
         signOut(auth).then(
             () => {
                 setUser({});
+                history.push('/home');
             }
         )
     }

@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import './Reviews.css';
 
 import Review from '../Review/Review';
+import Loading from '../../../../Shared/Loading/Loading';
 
 const Reviews = () => {
 
@@ -53,25 +54,33 @@ const Reviews = () => {
     // load reviews
     const [reviews, setReviews] = useState([]);
 
+    const [reviewLoaded, setReviewLoaded] = useState(false);
+
     useEffect(() => {
         fetch('http://localhost:5000/reviews')
-            .then(res => res.json()).then(data => setReviews(data));
+            .then(res => res.json()).then(data => {
+                setReviews(data);
+                setReviewLoaded(true);
+            });
     }, [])
     
 
-    return (
-        <div  className="review-bg mt-4">
-            <h1 className="pt-4 pb-2 text-light">What they're saying </h1>
-            <div className="container">
-                <Slider {...slickSettings} className="pt-4 mt-3">       
-                    {
-                        reviews.map(review => <Review key={ review.id} review= {review}/>)
-                    }
-                </Slider>
-                
+    if (!reviewLoaded) return <Loading />
+    else {
+            return (
+            <div  className="review-bg mt-4">
+                <h1 className="pt-4 pb-2 text-light">What they're saying </h1>
+                <div className="container">
+                    <Slider {...slickSettings} className="pt-4 mt-3">       
+                        {
+                            reviews.map(review => <Review key={ review.id} review= {review}/>)
+                        }
+                    </Slider>
+                    
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 export default Reviews;

@@ -15,7 +15,9 @@ const MakeAdmin = () => {
     const { handleSubmit, register, formState: { errors }, reset } = useForm();
     
     
-    const notify = () => toast("Made Admin Successfully!");
+    const notify = () => toast.success("Made Admin Successfully!", {
+        theme:"dark"
+    });
 
     const onSubmit = (data) => {
         confirmAlert({

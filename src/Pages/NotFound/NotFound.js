@@ -1,10 +1,25 @@
 import React from 'react';
 import './NotFound.css';
+import notfound from './not-found.gif';
+import { useHistory } from 'react-router';
 
 const NotFound = () => {
+
+    const history = useHistory();
+
+    const redirectToHome = () => {
+        history.push('/home')
+    }
+
     return (
-        <div className="mt-nav py-fit">
-            <h1>Page Not Found</h1>
+        <div className="py-fit not-found d-flex flex-column align-items-center justify-content-center">
+            <div><img src={notfound} className="img-fluid" alt=""/></div>
+            <div>
+                <button className="btn-generic" onClick={redirectToHome}>
+                    Home
+                    <i class="fas fa-home ms-1"></i>
+                </button>
+            </div>
         </div>
     );
 };

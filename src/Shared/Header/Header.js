@@ -1,12 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../Hooks/useAuth';
 import LogoutIcon from '@mui/icons-material/Logout';
-
+import { useHistory } from 'react-router';
 
 import './Header.css';
 
 const Header = () => {
     const { logOut, user, isLoading } = useAuth();
+
+    const history = useHistory();
 
     return (
         <div className="custom-nav bg-nav fixed-top">
@@ -43,7 +45,7 @@ const Header = () => {
                                             {!isLoading && <span className="fs-6 mx-2">{user.displayName}</span>}
                                         </li>
                                         <li className="nav-item mb-2 mb-lg-0">
-                                            <span className='common' onClick={logOut}><LogoutIcon></LogoutIcon>
+                                            <span className='common' onClick={()=>{logOut(history)}}><LogoutIcon></LogoutIcon>
                                             </span>
                                         </li>
                                     </>

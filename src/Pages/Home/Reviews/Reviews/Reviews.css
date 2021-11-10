@@ -4,6 +4,7 @@
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: overlay;
     height: 90vh;
 }
 
@@ -15,13 +16,18 @@
     transition: all .3s;
 }
 .slick-prev::before, .slick-next::before{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     transition: all .3s;
 }
 .slick-prev:hover , .slick-next:hover{
-    background-color: #070707;
+    background-color: #000000;
 }
 .slick-prev:hover:before, .slick-next:hover:before{
     color: #E3FFD1;
+}
+
+.slick-dots li button:before{
+    color: white;
+    opacity: .5;
 }

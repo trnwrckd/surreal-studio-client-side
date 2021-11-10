@@ -15,7 +15,7 @@ const AddReview = () => {
     
     const [rating, setRating] = useState(0);
 
-    const notify = () => toast("Review Added Successfully!");
+    const notify = () => toast.info("Review Added Successfully!");
 
     const handleRatingChange = (value) => {
         const rating = value.target.value;

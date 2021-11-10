@@ -4,12 +4,13 @@ import React from 'react';
 import { useProducts } from '../../../../Hooks/useProducts';
 import { toast, ToastContainer } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
+import Loading from '../../../../Shared/Loading/Loading';
 
 const ManageProducts = () => {
 
-    const { products , setProducts} = useProducts();
+    const { products , setProducts , productLoaded} = useProducts();
 
-    const delNotify = () => toast("Product Deleted.");
+    const delNotify = () => toast.error("Product Deleted.");
 
     // delete product
     const handleDeleteProduct = (id) => {
@@ -41,7 +42,17 @@ const ManageProducts = () => {
         });
     }
 
-    return (
+    if (!productLoaded) return <Loading />
+    else {
+        if (products.length === 0) {
+            <div className="py-5">
+                <div className="container py-5">
+                    <h2 className="py-5 my-5">No Current Products</h2>
+                </div>
+            </div>
+        }
+        else {
+            return (
         <div className="fit">
             <h1 className="mb-2">Manage Products</h1>
             <ToastContainer/>
@@ -71,6 +82,8 @@ const ManageProducts = () => {
             </div>
         </div>
     );
+        }
+    }
 };
 
 export default ManageProducts;
