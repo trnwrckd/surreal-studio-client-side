@@ -1,72 +1,62 @@
 [
     {
-        "id": 1,
         "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
         "artistName" : "Elba Rhea",
         "artistLocation" : "France",
         "price" : 2000
     },
     {
-        "id": 2,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://weandthecolor.com/wp-content/uploads/2012/08/The-Son-of-Man-by-Ren%c3%a9-Magritte-636544.jpg",
+        "artistName" : "Rene Magritte",
+        "artistLocation" : "Belgium",
+        "price" : 20000
     },
     {
-        "id": 3,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://static01.nyt.com/images/2015/07/24/arts/24INSIDEART2/24INSIDEART2-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+        "artistName" : "Anne Powers",
+        "artistLocation" : "USA",
+        "price" : 1500
     },
     {
-        "id": 4,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://www.boredpanda.com/blog/wp-content/uploads/2016/09/A-Corneta-57e4b87b75ba5__700.jpg",
+        "artistName" : "Salvador Dali",
+        "artistLocation" : "Spain",
+        "price" : 10000
     },
     {
-        "id": 5,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://i1.wp.com/surrealismtoday.com/wp-content/uploads/2020/07/Iteration-84-Rhinoceros-Gentle-Giant-2-Vincent-Fink-scaled.jpg?resize=357%2C542&ssl=1",
+        "artistName" : "Vincent Fink",
+        "artistLocation" : "USA",
+        "price" : 1000
     },
     {
-        "id": 6,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
+        "image" : "https://i.pinimg.com/originals/13/fc/bc/13fcbcf211a4db9cc21929a12f0f42d2.jpg",
+        "artistName" : "Salvador Dali",
         "artistLocation" : "France",
-        "price" : 2000
+        "price" : 15000
     },
     {
-        "id": 7,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://i.pinimg.com/550x/7c/c9/a1/7cc9a14bf83185c5951900a367a012a9.jpg",
+        "artistName" : "Rene Magritte",
+        "artistLocation" : "Belgium",
+        "price" : 18000
     },
     {
-        "id": 8,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://i0.wp.com/surrealismtoday.com/wp-content/uploads/2016/04/the-beginning-h7d-prints.jpg?w=700&ssl=1",
+        "artistName" : "Jimmie Copeland",
+        "artistLocation" : "Australia",
+        "price" : 1800
     },
     {
-        "id": 9,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://www.renemagritte.org/images/paintings/la-clairvoyance.jpg",
+        "artistName" : "Rene Magritte",
+        "artistLocation" : "Belgium",
+        "price" : 16000
     },
     {
-        "id": 10,
-        "image" : "https://doitbeforeme.com/wp-content/uploads/2020/03/modern-surreal-art-e1585246088721.jpg",
-        "artistName" : "Elba Rhea",
-        "artistLocation" : "France",
-        "price" : 2000
+        "image" : "https://www.renemagritte.org/images/paintings/not-to-be-reproduced.jpg",
+        "artistName" : "Rene Magritte",
+        "artistLocation" : "Belgium",
+        "price" : 25000
     }
 ]

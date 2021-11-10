@@ -7,6 +7,7 @@ import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore';
+import Purchase from './Pages/Purchase/Purchase';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
 
             <Route path='/register'>
               <Register/>
+            </Route>
+
+            <Route path='/purchase/:id'>
+              <Purchase></Purchase>
             </Route>
 
             <Route path='/dashboard'>

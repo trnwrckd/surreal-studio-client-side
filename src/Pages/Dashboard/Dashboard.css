@@ -8,6 +8,12 @@
     background-size: cover;
     background-blend-mode: lighten;
 }
+body{
+    font-family: 'Oswald', sans-serif;
+}
+.css-1v5u2yv{
+    height: 100%;
+}
 
 .back-to-home-btn{
     border: none;

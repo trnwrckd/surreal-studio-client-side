@@ -3,10 +3,19 @@ import './Product.css';
 import React from 'react';
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import { useHistory } from 'react-router';
 
 const Product = (props) => {
+    const { _id, image, artistName, artistLocation, price } = props.product;
 
-    const { image, artistName, artistLocation, price } = props.product;
+    const history = useHistory();
+
+    const redirectToPurchase = (productID) => {
+        const url = `/purchase/${productID}`;
+        history.push(url);
+    }
+
+
     return (
         <div className="col">
             <div className="art-container">
@@ -16,7 +25,7 @@ const Product = (props) => {
                     <h3 className="d-flex align-items-center" data-col="dark-blue"><AttachMoneyIcon sx={{ fontSize:'h4.fontSize'}}></AttachMoneyIcon> {price}</h3>
                 </div>
                 <img className="img-fluid"  src={image} alt="" />
-                <button className="btn-buy"> Buy Now</button>
+                <button className="btn-buy" onClick={ ()=>{redirectToPurchase(_id)}}> Buy Now</button>
             </div>    
         </div>
     );

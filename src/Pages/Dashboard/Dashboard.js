@@ -18,7 +18,6 @@ import {
   NavLink
 } from "react-router-dom";
 
-import './Dashboard.css';
 import { useHistory } from 'react-router';
 import Pay from './UserMenu/Pay/Pay';
 import AddReview from './UserMenu/AddReview/AddReview';
@@ -29,6 +28,7 @@ import AddProduct from './AdminMenu/AddProduct/AddProduct';
 import ManageOrders from './AdminMenu/ManageOrders/ManageOrders';
 import { useAuth } from '../../Hooks/useAuth';
 
+import './Dashboard.css';
 const drawerWidth = 240;
 
 
@@ -94,7 +94,7 @@ function Dashboard(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex', width: '100%' }}>
+        <Box sx={{ display: 'flex', width: '100%'}}>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -110,7 +110,7 @@ function Dashboard(props) {
                     aria-label="open drawer"
                     edge="start"
                     onClick={handleDrawerToggle}
-                    sx={{ mr: 2, display: { sm: 'none' } }}
+                    sx={{ mr: 2, display: { sm: 'none' } , bgColor: 'blue'} }
                 >
                     <MenuIcon />
                 </IconButton>
@@ -132,7 +132,7 @@ function Dashboard(props) {
                 ModalProps={{
                     keepMounted: true, // Better open performance on mobile.
                 }}
-                sx={{
+                    sx={{
                     display: { xs: 'block', sm: 'none' },
                     '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
                 }}
@@ -152,7 +152,7 @@ function Dashboard(props) {
         </Box>
         <Box
             component="main"
-            sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+            sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }  }}
         >
             <Toolbar />
             <Switch>

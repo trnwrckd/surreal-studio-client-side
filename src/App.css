@@ -12,6 +12,9 @@
 .py-fit{
   padding: 7em 0;
 }
+.fit{
+  min-height: 80vh;
+}
 
 /* for all navigation */
 .bg-nav{
