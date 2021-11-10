@@ -48,8 +48,8 @@ const Register = () => {
                                 {errors.email && <p className="text-danger fw-bold m-0">{errors.email.message}</p>}
                             </div>
                             <div className="form-floating mb-2">
-                                <input className="form-control px-5" type="password" placeholder="Password" id="email" {...register("password", { required: "Password is required" , minLength:{value:6 , message:"Password must be atleast 6 characters"}})} />
-                                <label htmlFor="email">Password</label>
+                                <input className="form-control px-5" type="password" placeholder="Password" id="pass" {...register("password", { required: "Password is required" , minLength:{value:6 , message:"Password must be atleast 6 characters"}})} />
+                                <label htmlFor="pass">Password</label>
                                 {errors.password && <p className="text-danger fw-bold m-0">{errors.password.message}</p>}
                             </div>
                             {

@@ -29,6 +29,8 @@ import ManageOrders from './AdminMenu/ManageOrders/ManageOrders';
 import { useAuth } from '../../Hooks/useAuth';
 
 import './Dashboard.css';
+import AdminRoute from '../../AdminRoute/AdminRoute';
+
 const drawerWidth = 240;
 
 
@@ -38,15 +40,18 @@ function Dashboard(props) {
     const history= useHistory()
     let { path, url } = useRouteMatch();
 
-    const { logOut } = useAuth();
-    
+    const { logOut, admin } = useAuth();
+
+    // mui drawer toggle
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
 
+    // redir to home
     const redirectToHome = () => {
         history.push('/home');
     };
+  
 
 
 
@@ -56,7 +61,30 @@ function Dashboard(props) {
             <h5 className="d-flex justify-content-center">Dashboard</h5>
             <Divider />
             <div className=" py-5 my-5 d-flex flex-column justify-content-end align-items-center">
-                <ul className="navbar-nav">
+
+                {
+                    admin ?
+                        <ul className="navbar-nav">
+                            {/* admin */}
+                            <li className="my-3 fs-4 nav-item">
+                                <NavLink to ={`${url}/manageorders`}  className="side-nav-common" activeClassName="side-nav-active" >Manage all orders </NavLink>
+                            </li>
+                            <li className="my-3 fs-4 nav-item">
+                                <NavLink to ={`${url}/addproduct`}  className="side-nav-common" activeClassName="side-nav-active" >Add Product </NavLink>
+                            </li>
+                            <li className="my-3 fs-4 nav-item">
+                                <NavLink to ={`${url}/manageproducts`}  className="side-nav-common" activeClassName="side-nav-active" >Manage Products </NavLink>
+                            </li>
+                            <li className="my-3 fs-4 nav-item">
+                                <NavLink to ={`${url}/makeadmin`}  className="side-nav-common" activeClassName="side-nav-active" >Make Admin </NavLink>
+                            </li>
+                            {/* always */}
+                            <li className="my-3 fs-4 nav-item">
+                                <span className="side-nav-common"  onClick={logOut}> Logout</span>
+                            </li>
+                        </ul> :
+                        <ul className="navbar-nav">
+                    
                     {/* user */}
                     <li className="my-3 fs-4 nav-item">
                         <NavLink to={`${url}/pay`} className="side-nav-common" activeClassName="side-nav-active"> Pay </NavLink>
@@ -67,25 +95,18 @@ function Dashboard(props) {
                     <li className="my-3 fs-4 nav-item">
                         <NavLink to ={`${url}/addreview`}  className="side-nav-common" activeClassName="side-nav-active" >Add Review </NavLink>
                     </li>
-
-                    {/* admin */}
-                    <li className="my-3 fs-4 nav-item">
-                        <NavLink to ={`${url}/manageorders`}  className="side-nav-common" activeClassName="side-nav-active" >Manage all orders </NavLink>
-                    </li>
-                    <li className="my-3 fs-4 nav-item">
-                        <NavLink to ={`${url}/addproduct`}  className="side-nav-common" activeClassName="side-nav-active" >Add Product </NavLink>
-                    </li>
-                    <li className="my-3 fs-4 nav-item">
-                        <NavLink to ={`${url}/manageproducts`}  className="side-nav-common" activeClassName="side-nav-active" >Manage Products </NavLink>
-                    </li>
-                    <li className="my-3 fs-4 nav-item">
-                        <NavLink to ={`${url}/makeadmin`}  className="side-nav-common" activeClassName="side-nav-active" >Make Admin </NavLink>
-                    </li>
                     {/* always */}
                     <li className="my-3 fs-4 nav-item">
                         <span className="side-nav-common"  onClick={logOut}> Logout</span>
                     </li>
+
+                    
                 </ul>
+
+                }
+
+
+                
                 
             </div>
         </div>
@@ -94,7 +115,7 @@ function Dashboard(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <Box sx={{ display: 'flex', width: '100%'}}>
+        <Box sx={{ display: 'flex', width: '100%' }}>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -155,32 +176,41 @@ function Dashboard(props) {
             sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }  }}
         >
             <Toolbar />
-            <Switch>
-                <Route exact path={path}>
-                    <Pay></Pay>
-                </Route>
-                <Route path={`${path}/pay`}>
-                    <Pay></Pay>
-                </Route>
-                <Route path={`${path}/addreview`}>
-                    <AddReview/>
-                </Route>
-                <Route path={`${path}/myorders`}>
-                    <MyOrders/>
-                </Route>
-                <Route path={`${path}/manageorders`}>
-                    <ManageOrders/>
-                </Route>
-                <Route path={`${path}/addproduct`}>
-                    <AddProduct/>
-                </Route>
-                <Route path={`${path}/manageproducts`}>
-                    <ManageProducts/>
-                </Route>
-                <Route path={`${path}/makeadmin`}>
-                    <MakeAdmin/>
-                </Route>
-            </Switch>
+                {
+                    admin ?
+                    <Switch>
+                            <AdminRoute exact path={path}>
+                                <ManageOrders/>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/manageorders`}>
+                                <ManageOrders/>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/addproduct`}>
+                                <AddProduct/>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/manageproducts`}>
+                                <ManageProducts/>
+                            </AdminRoute>
+                            <AdminRoute path={`${path}/makeadmin`}>
+                                <MakeAdmin/>
+                            </AdminRoute>
+                    </Switch>
+                        :
+                    <Switch>
+                        <Route exact path={path}>
+                            <Pay></Pay>
+                        </Route>
+                        <Route path={`${path}/pay`}>
+                            <Pay></Pay>
+                        </Route>
+                        <Route path={`${path}/addreview`}>
+                            <AddReview/>
+                        </Route>
+                        <Route path={`${path}/myorders`}>
+                            <MyOrders/>
+                        </Route>
+                    </Switch>    
+            }
         </Box>
         </Box>
     );

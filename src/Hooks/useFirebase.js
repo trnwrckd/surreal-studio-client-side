@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import authInit from '../Firebase/firebase-init';
 import { getAuth, signInWithPopup, signOut, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword , updateProfile} from "firebase/auth";
+import axios from "axios";
 
 // initiate authentication
 authInit();
@@ -10,9 +11,23 @@ const useFireBase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState('');
+    const [admin, setAdmin] = useState(false);
     
     const auth = getAuth()
     const googleProvider = new GoogleAuthProvider();
+
+    // save user 
+    const saveUser = (email, displayName, method = 'post') => {
+        const user = { email, displayName };
+        console.log(user);
+        if (method === 'put') {
+            axios.put('http://localhost:5000/users', user)
+                .then()
+        } else {
+            axios.post('http://localhost:5000/users', user)
+                .then()
+        }
+    }
     
     // sign in w google
     const googleSignin = (redirectURL, history) => {
@@ -21,33 +36,36 @@ const useFireBase = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user);
+                saveUser(result.user.email, result.user.displayName, 'put')
             }).then(() => {
                 history.push(redirectURL)
             }).finally(() => setIsLoading(false));
     }
 
     // update username when signed in with email and pass
-    const updateName = (name, history, redirectURL) => {
+    const updateName = (name, email, history, redirectURL) => {
         setIsLoading(true);
         updateProfile(auth.currentUser, { displayName: name })
             .then(result => {
-            history.push(redirectURL);
-            setIsLoading(false);
-        })
+                saveUser(email, name);
+                history.push(redirectURL);
+                setIsLoading(false);
+            })
     }
 
     // register with email and pass
     const emailRegister = (name, email, password, redirectURL, history) => {
 
         createUserWithEmailAndPassword(auth, email, password)
-        .then((result) => {
-            setUser(result.user);
-            updateName(name , history , redirectURL);
-        })
-        .catch((error) => {
-            const errorMessage = error.message;
-            setError(errorMessage);
-        });
+            .then((result) => {
+                const { user } = result;
+                setUser(user);
+                updateName(name, email, history, redirectURL);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage);
+            });
     }
     
     // sign in w email and pass
@@ -55,16 +73,16 @@ const useFireBase = () => {
         setIsLoading(true);
         
         signInWithEmailAndPassword(auth, email, password)
-        .then((result) => {
-            setUser(result.user);
-            history.push(redirectURL);
-        })
-        .catch((error) => {
-            const errorMessage = error.message;
-            setError(errorMessage);
-        }).finally(() => {
-            setIsLoading(false)
-        });
+            .then((result) => {
+                setUser(result.user);
+                history.push(redirectURL);
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage);
+            }).finally(() => {
+                setIsLoading(false)
+            });
     }
     
     // logout
@@ -73,26 +91,33 @@ const useFireBase = () => {
             () => {
                 setUser({});
             }
-            )
-        }
+        )
+    }
         
-        // set user state
-        useEffect(() => {
-            const userState = onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    setUser(user);
-                }
-                else {
-                    setUser({});
-                }
-                setIsLoading(false);
-            });
-            return userState;
-        },[auth])
-        
+    // set user state
+    useEffect(() => {
+        const userState = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({});
+            }
+            setIsLoading(false);
+        });
+        return userState;
+    }, [auth]);
+
+    // check admin 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+        .then(data => setAdmin(data.admin));
+    }, [user.email]);
+    
         
         return {
-            user, googleSignin , emailSignIn, emailRegister,  isLoading , error, logOut
+            user, admin, googleSignin , emailSignIn, emailRegister,  isLoading , error, logOut
         }
 }
 

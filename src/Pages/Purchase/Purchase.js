@@ -9,6 +9,7 @@ import { useAuth } from '../../Hooks/useAuth';
 import { useForm } from 'react-hook-form';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 import axios from 'axios';
 
 const Purchase = () => {

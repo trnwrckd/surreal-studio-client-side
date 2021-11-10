@@ -5,8 +5,7 @@ import React from 'react';
 const Pay = () => {
     return (
         <div className="fit py-5">
-            <h1>Pay</h1>
-            <div className="py-2"><img src={gif} alt="" /></div>
+            <div className="py-4"><img src={gif} alt="" /></div>
             <h4>Payment system coming soon.</h4>
         </div>
     );

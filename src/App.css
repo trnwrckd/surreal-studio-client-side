@@ -15,6 +15,12 @@
 .fit{
   min-height: 80vh;
 }
+/* confirm alert overlay should cover all of the screen */
+
+.react-confirm-alert-overlay{
+    z-index: 9999 !important;
+    background: black !important;
+}
 
 /* for all navigation */
 .bg-nav{
