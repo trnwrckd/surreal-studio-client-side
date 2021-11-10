@@ -1,0 +1,28 @@
+.review-container{
+    border-radius: 25px;
+    background-color: rgba(250, 255, 184, 0.7);
+    position: relative;
+    font-weight: 500;
+    font-size: 1.03em;
+    /* color: white; */
+    font-family: 'PT Sans' , sans-serif;
+}
+.review-container:before{
+    content: '“';
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: -60px;
+    color: rgb(43, 43, 43);
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Oswald', sans-serif;
+    font-size: 120px;
+}
+.img-circle{
+    border-radius: 50%;
+}

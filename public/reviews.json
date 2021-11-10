@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Lydia Yang", 
+        "image": "https://i.ibb.co/b23TMZW/user-1.png", 
+        "rating" : 4.0,
+        "content": "An amazing platform for exploring Surrealistic paintings. This website makes me want to create art that speaks silently."
+    },
+    {
+        "name": "Abigail King", 
+        "rating" : 4.7,
+        "image": "https://i.ibb.co/fHWxhmr/user-2.png", 
+        "content": "I have used this website to sell some of my artworks, before Surreal Studio I had absolutely no idea that my art was worth something."
+    },
+    {
+        "name": "Josh Martin", 
+        "rating" : 5.0,
+        "image": "https://i.ibb.co/dkxfkBC/user-3.png", 
+        "content": "Oh My God I bought an actual Salvador Dali painting from this website. It was so easy - I just confirmed my order and they shipped it right to my door!"
+    },
+    {
+        "name": "Jorge D Costa", 
+        "rating" : 3.5,
+        "image": "https://i.ibb.co/4NxrLTP/user-4.png", 
+        "content": "I think this website could've been more informative. The artworks are fine but I feel like more features should be added."
+    }
+]

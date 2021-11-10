@@ -10,10 +10,8 @@ import { confirmAlert } from 'react-confirm-alert';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 
-const MakeAdmin = (props) => {
-
-    // const { handleMakeAdmin } = props;
-    console.log(props)
+const MakeAdmin = () => {
+    
     const { handleSubmit, register, formState: { errors }, reset } = useForm();
     
     
