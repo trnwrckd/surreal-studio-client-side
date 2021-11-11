@@ -20,7 +20,7 @@ const AddReview = () => {
     const handleRatingChange = (value) => {
         const rating = value;
         setRating(rating);
-    }
+    };
 
     const onSubmit = (data) => {
         data.name = user.displayName;

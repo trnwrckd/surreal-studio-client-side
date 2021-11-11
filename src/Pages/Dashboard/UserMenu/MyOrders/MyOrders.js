@@ -34,7 +34,6 @@ const MyOrders = () => {
                     if (data.deletedCount > 0) {
                         delNotify();
                         const remainingOrders = orders.filter(order => order._id !== id);
-                        console.log(remainingOrders);
                         setOrders(remainingOrders);
                     }
                 });
@@ -51,7 +50,6 @@ const MyOrders = () => {
         fetch(`https://infinite-lowlands-70497.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setOrders(data);
                 setLoaded(true);
             });
