@@ -6,6 +6,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import axios from 'axios';
 import { useAuth } from '../../../../Hooks/useAuth';
 import Rating from 'react-rating';
+import { useHistory } from 'react-router';
 
 const AddReview = () => {
 
@@ -22,6 +23,11 @@ const AddReview = () => {
         setRating(rating);
     };
 
+    const history = useHistory();
+    const redirectToHome = () => {
+        history.push('/home');
+    }
+
     const onSubmit = (data) => {
         data.name = user.displayName;
         data.email = user.email;
@@ -34,6 +40,7 @@ const AddReview = () => {
                 if (res.data.insertedId) {
                     notify();
                     reset();
+                    setTimeout(redirectToHome , 2000)
                 }
             });
     }

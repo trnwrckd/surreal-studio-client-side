@@ -45,7 +45,7 @@ const Purchase = () => {
                 if (res.data.insertedId) {
                     notify();
                     reset();
-                    setTimeout(redirectToOrders , 1800);
+                    setTimeout(redirectToOrders , 2000);
                 }
             });
     }

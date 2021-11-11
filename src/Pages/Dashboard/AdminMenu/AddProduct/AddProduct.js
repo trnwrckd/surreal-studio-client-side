@@ -27,7 +27,7 @@ const AddProduct = () => {
                     notify();
                     clearErrors();
                     reset();
-                    setTimeout(redirectToExplore , 1800)
+                    setTimeout(redirectToExplore , 2000)
                 }
             });
     }
