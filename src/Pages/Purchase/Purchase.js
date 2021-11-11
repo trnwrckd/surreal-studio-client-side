@@ -1,7 +1,7 @@
 import './Purchase.css';
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,7 +14,7 @@ import axios from 'axios';
 
 const Purchase = () => {
 
-    const { user } = useAuth();
+    const { user , admin} = useAuth();
 
     const { handleSubmit, register, formState: { errors } ,reset} = useForm();
 
@@ -29,6 +29,11 @@ const Purchase = () => {
 
     const notify = () => toast.info("Order placed Successfully!");
 
+    const history = useHistory();
+    const redirectToOrders = () => {
+        admin ? history.push('/dashboard/manageorders') : history.push('/dashboard/myorders');
+    }
+
     const onSubmit = (data) => {
         data.name = user.displayName;
         data.email = user.email;
@@ -40,6 +45,7 @@ const Purchase = () => {
                 if (res.data.insertedId) {
                     notify();
                     reset();
+                    setTimeout(redirectToOrders , 1800);
                 }
             });
     }
