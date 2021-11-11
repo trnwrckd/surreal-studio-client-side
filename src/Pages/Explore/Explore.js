@@ -25,7 +25,7 @@ const Explore = () => {
                     <Header></Header>
                     <div className="mt-nav py-5 ">
                         <h1>Explore</h1>
-                        <div className="container py-4">
+                        <div className="container mt-5  overflow-hidden">
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
                             {
                                 products.map(product => <Product key={product.id} product = {product} />)

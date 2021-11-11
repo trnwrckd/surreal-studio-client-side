@@ -8,9 +8,17 @@
 
 .prod-info{
     background-color: rgb(42, 36, 63);
-    font-family: 'PT Sans' , sans-serif;
+    font-family: 'Rambla' , sans-serif;
     color: white;
     width: 100%;
+    transition: all .5s;
+}
+.prod-info:hover{
+    background-color: rgb(69, 45, 80);
+}
+
+.prod-info .btn-submit:hover{
+    border-color: rgb(255, 230, 6);
 }
 
 @media screen and (max-width : 768px) {

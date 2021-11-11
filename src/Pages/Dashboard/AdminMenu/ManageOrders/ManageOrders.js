@@ -91,7 +91,7 @@ const ManageOrders = () => {
         }
         else {
             return (
-        <div className="fit py-1">
+        <div className="fit my-3">
             <h1 className="mb-2"> Manage Orders</h1>
             <ToastContainer/>
             <div className="container py-3">
@@ -100,14 +100,14 @@ const ManageOrders = () => {
                         orders.map(order =>
                             <Order key={order._id} order={order}>
                                 <div className="d-flex justify-content-center">
-                                                <button className="btn-generic btn-red" onClick={() => handleDeleteOrder(order._id)}> Delete
-                                                    <i className="fas fa-trash-alt ms-1"></i>
+                                                <button className="btn-del " onClick={() => handleDeleteOrder(order._id)}> Delete
+                                                    <i className="fas fa-trash-alt ms-1 text-danger fw-bold"></i>
                                                 </button>
                                                 {
-                                                    order.orderStatus === "Approved" || 
-                                                <button className="btn-generic btn-green ms-2" onClick={()=>{handleUpdateStatus(order._id)}}> 
+                                                    order.orderStatus === "Shipped" || 
+                                                <button className="btn-update ms-2" onClick={()=>{handleUpdateStatus(order._id)}}> 
                                                     Confirm
-                                                    <i className="far fa-check-circle ms-1"></i>
+                                                    <i className="far fa-check-circle ms-1 text-success fw-bold"></i>
                                                 </button> 
                                                 }
                                             </div>

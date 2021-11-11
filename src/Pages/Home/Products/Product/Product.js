@@ -27,7 +27,7 @@ const Product = (props) => {
                     </div>
                 </div>
                 
-                <img className="img-fluid"  src={image} alt="" />
+                <img className="img-fluid"  src={image} alt="" width="100%"/>
                 
                 <button className="btn-buy" onClick={ ()=>{redirectToPurchase(_id)}}> Buy Now</button>
             </div>    

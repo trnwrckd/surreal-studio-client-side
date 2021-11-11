@@ -90,10 +90,6 @@
     transition: all .4s;
 }
 
-.btn-generic:hover{
-  transform: scale(1.03);
-  /* color: black; */
-}
 
 .btn-generic:before{
   position: absolute;
@@ -128,6 +124,40 @@
 .btn-generic:hover:after{
   right: -50%;
   opacity: .5;
+}
+
+.btn-submit{
+  transition: all .5s;
+  border-radius: 12px;
+}
+.btn-submit:before{
+  background-color: rgb(129, 255, 97);
+}
+.btn-submit:after{
+  background-color: rgb(253, 223, 124);
+}
+.btn-submit:hover{
+  /* text-shadow: 0px 0px 2px rgb(255, 255, 255); */
+}
+
+/* delete and update btn */
+
+.btn-del, .btn-update{
+  border: 2px solid black;
+  padding: 3px 10px;
+  transition: all .5s;
+}
+
+.btn-del{
+  background-color: rgb(255, 199, 195);
+}
+.btn-update{
+  background-color: rgb(209, 255, 195);
+}
+
+.btn-del:hover , .btn-update:hover{
+  background-color: rgb(10, 10, 10);
+  color: white;
 }
 
 

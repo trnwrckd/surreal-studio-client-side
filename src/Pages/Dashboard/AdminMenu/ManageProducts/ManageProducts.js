@@ -70,8 +70,10 @@ const ManageProducts = () => {
                                             <div className=" h-100 py-3 d-flex flex-column justify-content-center align-items-center">
                                                 <h6>{product.artistName}</h6>
                                                 <h6>{product.artistLocation}</h6>
-                                                <h6>{product.price}</h6>
-                                                <button className="btn-generic" onClick={() => handleDeleteProduct(product._id)}> Delete</button>
+                                                <h6>$ {product.price}</h6>
+                                                <button className="btn-del" onClick={() => handleDeleteProduct(product._id)}> Delete
+                                                    <i className="fas fa-trash-alt ms-1 text-danger fw-bold"></i>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

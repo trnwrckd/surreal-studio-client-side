@@ -31,7 +31,7 @@ const AddProduct = () => {
         <div className="fit">
             <h1>Add Product</h1>
             <div className='d-flex justify-content-center py-3'>
-                <form onSubmit={handleSubmit(onSubmit)} className="w-50">
+                <form onSubmit={handleSubmit(onSubmit)} className="w-75">
                      <ToastContainer/>
                     {/* name */}
                     <div className="form-floating mb-2">
@@ -61,7 +61,7 @@ const AddProduct = () => {
                          {errors.image && <p className="text-danger fw-bold m-0"> {errors.image.message}</p>}
                     </div>
 
-                    <div className="mt-3"><button className="btn-generic btn-blue">
+                    <div className="mt-3"><button className="btn-generic btn-submit">
                             Submit
                         </button>
                     </div>

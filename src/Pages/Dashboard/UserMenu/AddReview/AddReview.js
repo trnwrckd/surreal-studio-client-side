@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 import axios from 'axios';
 import { useAuth } from '../../../../Hooks/useAuth';
-import { Rating } from '@mui/material';
+import Rating from 'react-rating';
 
 const AddReview = () => {
 
@@ -42,7 +42,7 @@ const AddReview = () => {
         <div className="fit">
             <h1>Add Review</h1>
             <div className='d-flex justify-content-center py-3'>
-                <form onSubmit={handleSubmit(onSubmit)} className="w-50">
+                <form onSubmit={handleSubmit(onSubmit)} className="w-75">
                      <ToastContainer/>
                     {/* name */}
                     <div className="form-floating mb-2">
@@ -64,15 +64,16 @@ const AddReview = () => {
                     </div>
 
                     {/* rating */}
-                    <Rating className="mb-2"
-                        name="facilityRate"
-                        onChange={handleRatingChange}
-                        placeholderRating={0}
-                        emptySymbol="far fa-star icon-color"
-                        fullSymbol="fas fa-star icon-color"
-                        // value={this.state.form.facilityRate}
-                    >
-                    </Rating>
+                    <div className="d-flex justify-content-center align-items-center">
+                        <h5 className="mx-3">Rating - </h5>
+                        <Rating className="mb-2"
+                            onChange={handleRatingChange}
+                            placeholderRating={0}
+                            emptySymbol="far fa-star icon-color"
+                            fullSymbol="fas fa-star icon-color"
+                            >
+                        </Rating>
+                    </div>
                     <input type="hidden" {... register("rating")} />
                     <input type="hidden" {... register("image")} />
 

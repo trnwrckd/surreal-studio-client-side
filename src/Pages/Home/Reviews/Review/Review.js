@@ -6,7 +6,7 @@ import Rating from 'react-rating';
 const Review = (props) => {
     const { name, image, content ,rating } = props.review;
     return (
-        <div className="review-container p-3 m-3">
+        <div className="review-container p-3 mt-5 mx-4">
             <p className="px-3 py-1 mb-1"> {content}</p>
             <Rating className="my-2"
                 initialRating={rating}

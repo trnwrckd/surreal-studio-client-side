@@ -114,7 +114,7 @@ const useFireBase = () => {
 
     // check admin 
     useEffect(() => {
-        fetch(`https://infinite-lowlands-70497.herokuapp.com/susers/${user.email}`)
+        fetch(`https://infinite-lowlands-70497.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
         .then(data => setAdmin(data.admin));
     }, [user.email]);
