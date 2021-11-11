@@ -29,7 +29,7 @@ const AddReview = () => {
         const displayImage  = user.photoURL || 'https://i.ibb.co/5rJ3gMz/fakeDP.png'
         data.displayImage = displayImage;
         
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://infinite-lowlands-70497.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     notify();

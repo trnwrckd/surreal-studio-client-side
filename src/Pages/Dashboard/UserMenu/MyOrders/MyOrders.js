@@ -25,7 +25,7 @@ const MyOrders = () => {
             {
                 label: 'Yes',
                     onClick: () => {
-                    const url = `http://localhost:5000/orders/${id}`;
+                    const url = `https://infinite-lowlands-70497.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -48,7 +48,7 @@ const MyOrders = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user.email}`)
+        fetch(`https://infinite-lowlands-70497.herokuapp.com/orders/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

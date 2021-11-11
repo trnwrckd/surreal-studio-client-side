@@ -24,10 +24,10 @@ const useFireBase = () => {
         const user = { email, displayName };
         console.log(user);
         if (method === 'put') {
-            axios.put('http://localhost:5000/users', user)
+            axios.put('https://infinite-lowlands-70497.herokuapp.com/users', user)
                 .then()
         } else {
-            axios.post('http://localhost:5000/users', user)
+            axios.post('https://infinite-lowlands-70497.herokuapp.com/users', user)
                 .then()
         }
     }
@@ -114,7 +114,7 @@ const useFireBase = () => {
 
     // check admin 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://infinite-lowlands-70497.herokuapp.com/susers/${user.email}`)
             .then(res => res.json())
         .then(data => setAdmin(data.admin));
     }, [user.email]);

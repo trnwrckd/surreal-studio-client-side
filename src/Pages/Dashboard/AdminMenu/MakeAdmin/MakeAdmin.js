@@ -28,7 +28,7 @@ const MakeAdmin = () => {
             {
                 label: 'Yes',
                     onClick: () => {
-                        axios.put('http://localhost:5000/users/admin', data)
+                        axios.put('https://infinite-lowlands-70497.herokuapp.com/users/admin', data)
                             .then((data) => {
                                 if (data.data.modifiedCount > 0) {
                                     notify();

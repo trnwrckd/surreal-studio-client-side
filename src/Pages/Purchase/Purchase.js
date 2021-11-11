@@ -23,7 +23,7 @@ const Purchase = () => {
     const [product, setProduct] = useState();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`).then(result => result.json())
+        fetch(`https://infinite-lowlands-70497.herokuapp.com/products/${id}`).then(result => result.json())
             .then(data => setProduct(data));
     }, [id]);
 
@@ -35,7 +35,7 @@ const Purchase = () => {
 
         data.orderStatus = "Pending";
 
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://infinite-lowlands-70497.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     notify();

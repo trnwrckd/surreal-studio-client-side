@@ -57,7 +57,7 @@ const Reviews = () => {
     const [reviewLoaded, setReviewLoaded] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://infinite-lowlands-70497.herokuapp.com/reviews')
             .then(res => res.json()).then(data => {
                 setReviews(data);
                 setReviewLoaded(true);

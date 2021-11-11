@@ -5,7 +5,7 @@ export const useProducts = () => {
     const [productLoaded, setProductLoaded] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://infinite-lowlands-70497.herokuapp.com/products')
             .then(result => result.json())
             .then(data => {
                 setProducts(data);

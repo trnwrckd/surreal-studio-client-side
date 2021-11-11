@@ -21,7 +21,7 @@ const ManageProducts = () => {
             {
                 label: 'Yes',
                     onClick: () => {
-                    const url = `http://localhost:5000/products/${id}`;
+                    const url = `https://infinite-lowlands-70497.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

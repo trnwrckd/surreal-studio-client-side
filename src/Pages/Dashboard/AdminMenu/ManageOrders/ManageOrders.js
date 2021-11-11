@@ -13,7 +13,7 @@ const ManageOrders = () => {
     const [order, setOrder] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders').then(res => res.json())
+        fetch('https://infinite-lowlands-70497.herokuapp.com/orders').then(res => res.json())
             .then(data => {
                 setOrders(data);
                 setLoaded(true);
@@ -34,7 +34,7 @@ const ManageOrders = () => {
             {
                 label: 'Yes',
                     onClick: () => {
-                    const url = `http://localhost:5000/orders/${id}`;
+                    const url = `https://infinite-lowlands-70497.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -61,7 +61,7 @@ const ManageOrders = () => {
         const updatedOrder = { ...order, 'orderStatus': 'confirmed' };
         setOrder(updatedOrder);
 
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://infinite-lowlands-70497.herokuapp.com/orders/${id}`;
 
         fetch(url, {
             method: 'PUT',
