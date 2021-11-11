@@ -21,8 +21,8 @@ const Products = () => {
         else {
             return (
                 <div className="mt-4">
-                    <h1>Newest Artworks</h1>
-                    <div className="container my-4 pt-5 overflow-hidden">
+                    <h1 className="pb-3">Newest Artworks</h1>
+                    <div className="container my-4 py-5 overflow-hidden">
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
                             {
                                 products.slice(0,6).map(product => <Product key={product._id} product = {product} />)

@@ -1,5 +1,5 @@
 import './Register.css';
-import bg from '../../images/login-reg-bg.png';
+import bg from '../../images/login-reg-bg.jpg';
 
 import React from 'react';
 import { useForm } from 'react-hook-form';

@@ -17,7 +17,7 @@ const NotFound = () => {
             <div>
                 <button className="btn-generic" onClick={redirectToHome}>
                     Home
-                    <i class="fas fa-home ms-1"></i>
+                    <i className="fas fa-home ms-1"></i>
                 </button>
             </div>
         </div>

@@ -1,0 +1,39 @@
+.half-width{
+    width: 50%;
+}
+.half-width:first-child{
+    background-color: rgb(129, 155, 108);
+    background-blend-mode: darken;
+}
+
+.half-width:last-child{
+    background: linear-gradient(90deg , rgb(211, 255, 215), rgb(255, 226, 172), rgb(255, 255, 214));
+}
+
+.dali-img{
+    width: 100%;
+    /* height: 100%; */
+    opacity: .75;
+}
+
+.surrealism-def{
+    width: 75%;
+    line-height: 150%;
+    word-spacing: 3px;
+    letter-spacing: .2px;
+}
+
+@media screen and (max-width : 1200px){
+    .dali-img{
+        height: 100%;
+    }
+}
+@media screen and (max-width : 800px){
+    .half-width{
+        width: 100%;
+    }
+    .surrealism-def{
+        width: 100%;
+    }
+    
+}

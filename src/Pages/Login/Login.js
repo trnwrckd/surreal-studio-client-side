@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import './Login.css';
 
-import bg from '../../images/login-reg-bg.png';
+import bg from '../../images/login-reg-bg.jpg';
 
 import {useHistory , useLocation } from 'react-router-dom';
 import { useAuth } from '../../Hooks/useAuth';

@@ -1,0 +1,37 @@
+[
+    {
+        "id" : 1,
+        "image" : "https://www.renemagritte.org/images/paintings/the-treachery-of-images.jpg",
+        "caption" : "The Treachery of Images",
+        "artist" : "René Magritte",
+        "description" : "Magritte’s realistic painting of a simple wooden pipe has become one of the most iconic paintings of the Surrealist movement. Beneath the pipe is the inscription “Ceci n’est pas un pipe” (‘This is not a pipe’). Magritte was inspired by metaphysical philosophy, offering the viewer a paradox. What can be seen is a pipe, but his words contradict this immediate understanding of the painting. If it is not a pipe, then what is it? Magritte inspires the viewer to think about the relationship between language and everyday objects, as well as art versus reality."
+    },
+    {
+        "id" : 2,
+        "image" : "https://www.manray.net/images/gallery/observatory-time-the-lovers.jpg",
+        "caption" : "Observatory Time: The Lovers",
+        "artist" : "Man Ray",
+        "description" : "Observatory Time - The Lovers, or as it has become more familiarly known, The Lips, has been described as the quintessential Surrealist painting, a supreme example of isomorphism, the use of organic forms oddly and obliquely referring to man, in a kind of fastidious, realistic illusionism - the unifying theme in mainstream Surrealist art in the heyday of the 1930s. Its title exemplifies Gertrude Steins insistence up9on embodying 'time in the composition'. The canvas was eight feet long and over three feet high, and it took Man Ray two years of meticulous, daily work to get it right."
+    },
+    {
+        "id" : 3,
+        "image" : "https://www.moma.org/learn/moma_learning/_assets/www.moma.org/wp/moma_learning/wp-content/uploads/2012/06/Miro.-The-Hunter-Catalan-Landscape-469x307.jpg",
+        "caption" : "The Hunter (Catalan Landscape)",
+        "artist" : "Joan Miró",
+        "description" : "Miró’s The Hunter depicts a surrealist landscape inspired by Catalonia, where his family was from. The landscape is saturated with strange triangular shapes, orbs, and disembodied human and animal forms. In fact, the only truly recognisable organisms in the painting are the birds. The forms and figures hover, float, and seem to be in constant motion. In the foreground, the word “sard” is written, short for “Sardana”, Catalonia’s national dance. The shortened word was inspired by the fragmented words of Dadaist and Surrealist poetry."
+    },
+    {
+        "id" : 4,
+        "image" : "https://cdn20.pamono.com/p/s/9/3/936889_mehe8sk0l0/galatea-aux-spheres-by-salvador-dali.jpg",
+        "caption" : "Galatea of the Spheres",
+        "artist" : "Salvador Dali",
+        "description" : "Galatea of the Spheres is a painting by Salvador Dalí made in 1952. It depicts Gala Dalí, Salvador Dalí's wife and muse, as pieced together through a series of spheres arranged in a continuous array. The name Galatea refers to a sea nymph of Classical mythology renowned for her virtue, and may also refer to the statue beloved by its creator, Pygmalion."
+    },
+    {
+        "id" : 5,
+        "image" : "https://www.renemagritte.org/images/paintings/golconda.jpg",
+        "caption" : "Golconda",
+        "artist" : "René Magritte",
+        "description" : "Golconda depicts a scene of nearly identical men dressed in dark overcoats and bowler hats, who seem to be drops of heavy rain (or to be floating like helium balloons, though there is no actual indication of motion), against a backdrop of buildings and blue sky. The men are spaced in hexagonal grids facing the viewpoint and receding back in grid layers. Magritte himself lived in a similar suburban environment, and dressed in a similar fashion. The bowler hat was a common feature of much of his work, and appears in paintings like The Son of Man."
+    }
+]

@@ -30,7 +30,7 @@ import { useAuth } from '../../Hooks/useAuth';
 
 import './Dashboard.css';
 import AdminRoute from '../../AdminRoute/AdminRoute';
-import NotFound from '../NotFound/NotFound';
+
 
 const drawerWidth = 240;
 
@@ -198,13 +198,16 @@ function Dashboard(props) {
                                 <MakeAdmin/>
                             </AdminRoute>
                             <AdminRoute path={`${path}/*`}>
-                                <NotFound/>
+                                <div className="fit py-5">
+                                    <h1>The Page you requested wasn't found.</h1>
+                                    <h3 className="mt-4">It might be a user route or never have existed at all.</h3>
+                            </div>
                             </AdminRoute>
                     </Switch>
                         :
                     <Switch>
                         <Route exact path={path}>
-                            <Pay></Pay>
+                            <MyOrders/>
                         </Route>
                         <Route path={`${path}/pay`}>
                             <Pay></Pay>
@@ -216,7 +219,10 @@ function Dashboard(props) {
                             <MyOrders/>
                         </Route>
                         <Route path={`${path}/*`}>
-                            <NotFound/>
+                            <div className="fit py-5">
+                                    <h1>The Page you requested wasn't found.</h1>
+                                    <h3 className="mt-4">It might be an admin route or never have existed at all.</h3>
+                            </div>
                         </Route>
                     </Switch>    
             }

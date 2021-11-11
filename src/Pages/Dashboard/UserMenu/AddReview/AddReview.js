@@ -18,7 +18,7 @@ const AddReview = () => {
     const notify = () => toast.info("Review Added Successfully!");
 
     const handleRatingChange = (value) => {
-        const rating = value.target.value;
+        const rating = value;
         setRating(rating);
     }
 
@@ -27,7 +27,7 @@ const AddReview = () => {
         data.email = user.email;
         data.rating = rating;
         const displayImage  = user.photoURL || 'https://i.ibb.co/5rJ3gMz/fakeDP.png'
-        data.displayImage = displayImage;
+        data.image = displayImage;
         
         axios.post('https://infinite-lowlands-70497.herokuapp.com/reviews', data)
             .then(res => {
@@ -68,7 +68,7 @@ const AddReview = () => {
                         <h5 className="mx-3">Rating - </h5>
                         <Rating className="mb-2"
                             onChange={handleRatingChange}
-                            placeholderRating={0}
+                            initialRating={rating}
                             emptySymbol="far fa-star icon-color"
                             fullSymbol="fas fa-star icon-color"
                             >

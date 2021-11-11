@@ -9,13 +9,16 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore';
 import Purchase from './Pages/Purchase/Purchase';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Art from './Pages/Art/Art';
+import ScrollToTop from './Shared/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Switch>
+          <ScrollToTop>
+            <Switch>
 
             <Route exact path='/'>
               <Home/>
@@ -31,6 +34,10 @@ function App() {
 
             <Route path='/register'>
               <Register/>
+            </Route>
+
+            <Route path='/art'>
+              <Art/>
             </Route>
 
             <PrivateRoute path='/purchase/:id'>
@@ -51,7 +58,7 @@ function App() {
             </Route>
 
           </Switch>
-
+          </ScrollToTop>
       </Router>
       </AuthProvider>
     </div>

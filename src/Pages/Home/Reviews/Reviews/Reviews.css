@@ -1,11 +1,11 @@
 .review-bg{
     background-color: #555555;
-    background-image: url('./review-bg.webp');
+    background-image: url('./review-bg.jpg');
     background-position: top left;
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-    height: 90vh;
+    height: 85vh;
 }
 
 /* overriding slick theme css */
@@ -30,4 +30,10 @@
 .slick-dots li button:before{
     color: white;
     opacity: .5;
+}
+
+@media screen and (max-width : 576px) {
+    .review-bg{
+        height: 70vh;
+    }
 }

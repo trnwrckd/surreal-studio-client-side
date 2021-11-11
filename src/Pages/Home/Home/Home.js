@@ -5,6 +5,7 @@ import Products from '../Products/Products/Products';
 import Reviews from '../Reviews/Reviews/Reviews';
 import Header from '../../../Shared/Header/Header';
 import Footer from '../../../Shared/Footer/Footer';
+import Surrealism from '../Surrealism/Surrealism';
 
 const Home = () => {
     return (
@@ -13,7 +14,8 @@ const Home = () => {
             <div className="mt-nav">
                 <Banner/>
                 <Products/>
-                <Reviews/>
+                <Reviews />
+                <Surrealism/>
             </div>
             <Footer/>
         </>

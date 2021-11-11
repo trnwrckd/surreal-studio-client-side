@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&family=PT+Sans:wght@400;700&family=Rambla:wght@400;700&display=swap');
 
 :root{
-  
+  --fs-gigantext: 5rem;
+  --fs-big: 2.5rem;
+  --fs-medium: 1.2rem;
 }
+
+@media (min-width: 1200px) {
+  :root{
+    --fs-gigantext: 7rem;
+    --fs-big: 3.4rem;
+    --fs-medium: 1.8rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

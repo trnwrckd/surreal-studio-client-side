@@ -1,0 +1,19 @@
+.border-tb{
+    border-top: 1px solid black;
+}
+.art-heading{
+    font-size: var(--fs-gigantext);
+}
+.art-description{
+    font-size: var(--fs-medium);
+}
+.artwork{
+    font-size: 1.3rem;
+    text-indent: 30px;
+}
+
+@media (max-width:992px){
+    .artwork{
+        font-size: 1.2rem;
+    }
+}

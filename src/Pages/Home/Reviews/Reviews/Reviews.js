@@ -73,7 +73,7 @@ const Reviews = () => {
                 <div className="container">
                     <Slider {...slickSettings} className="pt-4 mt-3">       
                         {
-                            reviews.map(review => <Review key={ review.id} review= {review}/>)
+                            reviews.map(review => <Review key={ review._id} review= {review}/>)
                         }
                     </Slider>
                     
