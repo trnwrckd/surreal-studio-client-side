@@ -9,7 +9,7 @@ import Loading from '../../Shared/Loading/Loading';
 const Explore = () => {
 
     const { products, productLoaded } = useProducts();
-    if (!productLoaded) return <Loading />
+    if (!productLoaded) return <div className="mt-nav py-5"><Header/><Loading/><Footer/></div>
     else {
         if (products.length === 0) {
             <div className="mt-nav py-5">
@@ -27,7 +27,7 @@ const Explore = () => {
                         <div className="container mt-5  overflow-hidden">
                         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-5">
                             {
-                                [...products].reverse().map(product => <Product key={product.id} product = {product} />)
+                                [...products].reverse().map(product => <Product key={product._id} product = {product} />)
                             }
                         </div>
                     </div>

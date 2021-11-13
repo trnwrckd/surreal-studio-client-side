@@ -10,6 +10,9 @@ import { useForm } from 'react-hook-form';
 import Header from '../../Shared/Header/Header';
 import Footer from '../../Shared/Footer/Footer';
 import 'react-confirm-alert/src/react-confirm-alert.css';
+
+import PersonPinIcon from '@mui/icons-material/PersonPin';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import axios from 'axios';
 
 const Purchase = () => {
@@ -49,7 +52,6 @@ const Purchase = () => {
                 }
             });
     }
-
     return (
         <>
             <Header></Header>
@@ -57,8 +59,16 @@ const Purchase = () => {
                 <div className="container py-5">
                 <div className="row row-cols-1 row-cols-md-2 g-5">
                     <div className="col order-md-2">
-                        <div>
-                                <img src={product?.image} className="img-fluid" height="400px" width="280px" alt=""/>
+                            <div>
+                                <div className="d-flex justify-content-center">
+                                    <h3 className="me-3"> {product?.artistName}</h3>
+                                    <h3 className="d-flex align-items-center justify-content-center"> <PersonPinIcon sx={{ fontSize:'h4.fontSize'}}></PersonPinIcon> {product?.artistLocation}</h3>
+                                </div>
+                                
+                                <div className="w-75 mx-auto">
+                                    <h4 className="d-flex align-items-center justify-content-center my-0 py-2 bg-dark" data-col="gold"><AttachMoneyIcon sx={{ fontSize:'h4.fontSize'}}></AttachMoneyIcon> {product?.price}</h4>
+                                    <img src={product?.image} className="img-fluid purchase-img" height="400px" alt="" />
+                                </div>
                         </div>
                     </div>
                     <div className="col order-md-1 d-flex flex-column justify-content-center">

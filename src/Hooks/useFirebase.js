@@ -22,7 +22,7 @@ const useFireBase = () => {
     // save user 
     const saveUser = (email, displayName, method = 'post') => {
         const user = { email, displayName };
-        console.log(user);
+        
         if (method === 'put') {
             axios.put('https://infinite-lowlands-70497.herokuapp.com/users', user)
                 .then()

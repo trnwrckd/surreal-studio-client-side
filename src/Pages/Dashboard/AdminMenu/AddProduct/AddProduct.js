@@ -4,7 +4,6 @@ import React from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
-import { useHistory } from 'react-router';
 
 const AddProduct = () => {
 
@@ -12,14 +11,9 @@ const AddProduct = () => {
 
     const notify = () => toast.success("Product Added to Explore Page!");
 
-    const history = useHistory();
 
-    const redirectToExplore = () => {
-        history.push('/explore');
-    }
 
     const onSubmit = (data) => {
-        console.log(data);
         
         axios.post('https://infinite-lowlands-70497.herokuapp.com/products', data)
             .then(res => {
@@ -27,7 +21,6 @@ const AddProduct = () => {
                     notify();
                     clearErrors();
                     reset();
-                    setTimeout(redirectToExplore , 2000)
                 }
             });
     }
