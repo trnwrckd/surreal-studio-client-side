@@ -13,6 +13,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import PersonPinIcon from '@mui/icons-material/PersonPin';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import Loader from "react-js-loader";
 import axios from 'axios';
 
 const Purchase = () => {
@@ -24,10 +25,14 @@ const Purchase = () => {
     const { id } = useParams();
     
     const [product, setProduct] = useState();
+    const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         fetch(`https://infinite-lowlands-70497.herokuapp.com/products/${id}`).then(result => result.json())
-            .then(data => setProduct(data));
+            .then(data => {
+                setProduct(data);
+                setIsLoaded(true);
+            });
     }, [id]);
 
     const notify = () => toast.info("Order placed Successfully!");
@@ -55,17 +60,23 @@ const Purchase = () => {
     return (
         <>
             <Header></Header>
-            <div className="mt-nav py-5">
-                <div className="container py-5">
+            <div className="mt-nav py-5 overflow-hidden">
+                <div className="container pb-5 mb-5">
                 <div className="row row-cols-1 row-cols-md-2 g-5">
                     <div className="col order-md-2">
                             <div>
                                 <div className="d-flex justify-content-center">
-                                    <h3 className="me-3"> {product?.artistName}</h3>
-                                    <h3 className="d-flex align-items-center justify-content-center"> <PersonPinIcon sx={{ fontSize:'h4.fontSize'}}></PersonPinIcon> {product?.artistLocation}</h3>
+                                    {
+                                        isLoaded ?
+                                            <>
+                                                <h3 className="me-3"> {product?.artistName}</h3>
+                                                <h3 className="d-flex align-items-center justify-content-center"> <PersonPinIcon sx={{ fontSize:'h4.fontSize'}}></PersonPinIcon> {product?.artistLocation}</h3>
+                                            </> :
+                                            <Loader type="ring" bgColor={"goldenrod"} color={'black'} size={50} />
+                                    }
                                 </div>
                                 
-                                <div className="w-75 mx-auto">
+                                <div className="w-75 mx-auto overflow-hidden">
                                     <h4 className="d-flex align-items-center justify-content-center my-0 py-2 bg-dark" data-col="gold"><AttachMoneyIcon sx={{ fontSize:'h4.fontSize'}}></AttachMoneyIcon> {product?.price}</h4>
                                     <img src={product?.image} className="img-fluid purchase-img" height="400px" alt="" />
                                 </div>
