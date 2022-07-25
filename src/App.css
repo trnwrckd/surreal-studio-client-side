@@ -55,6 +55,9 @@
 [data-col = "light-green"]{
   color: rgb(167, 255, 171);
 }
+.text-warning{
+  color: #998281;
+}
 
 /* redirect to reg/login text*/
 .redirect , .redirect-register{
