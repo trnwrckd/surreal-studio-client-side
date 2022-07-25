@@ -58,7 +58,7 @@ const ManageOrders = () => {
     // update order status
     const handleUpdateStatus = (id) => {
         
-        const updatedOrder = { ...order, 'orderStatus': 'confirmed' };
+        const updatedOrder = { ...order, 'orderStatus': 'Shipped' };
         setOrder(updatedOrder);
 
         const url = `https://infinite-lowlands-70497.herokuapp.com/orders/${id}`;
