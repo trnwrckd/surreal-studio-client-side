@@ -2,13 +2,13 @@ import './Purchase.css';
 
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
-import { apiUrl } from '../../constants';
+import apiUrl from 'constants';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAuth } from '../../Hooks/useAuth';
+import { useAuth } from 'Hooks/useAuth';
 import { useForm } from 'react-hook-form';
-import Header from '../../Shared/Header/Header';
-import Footer from '../../Shared/Footer/Footer';
+import Header from 'Shared/Header/Header';
+import Footer from 'Shared/Footer/Footer';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
 import PersonPinIcon from '@mui/icons-material/PersonPin';

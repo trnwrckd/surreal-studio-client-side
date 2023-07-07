@@ -1,11 +1,11 @@
 import './MyOrders.css';
 
 import React, { useEffect, useState } from 'react';
-import { useAuth } from '../../../../Hooks/useAuth';
-import Order from '../../../../Shared/Order/Order';
+import { useAuth } from 'Hooks/useAuth';
+import Order from 'Shared/Order/Order';
 import { confirmAlert } from 'react-confirm-alert';
 import { toast, ToastContainer } from 'react-toastify';
-import Loading from '../../../../Shared/Loading/Loading';
+import Loading from 'Shared/Loading/Loading';
 
 const MyOrders = () => {
   const { user } = useAuth();

@@ -4,8 +4,8 @@ import React, { useEffect, useState } from 'react';
 import Order from '../../../../Shared/Order/Order';
 import { toast, ToastContainer } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
-import Loading from '../../../../Shared/Loading/Loading';
-import { apiUrl } from '../../../../constants';
+import Loading from 'Shared/Loading/Loading';
+import apiUrl from 'constants';
 
 const ManageOrders = () => {
   const [orders, setOrders] = useState([]);

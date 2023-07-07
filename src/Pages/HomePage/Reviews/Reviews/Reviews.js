@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { apiUrl } from '../../../../constants';
+import apiUrl from 'constants';
 import './Reviews.css';
 
 import Review from '../Review/Review';
-import Loading from '../../../../Shared/Loading/Loading';
+import Loading from 'Shared/Loading/Loading';
 
 const Reviews = () => {
   const slickSettings = {

@@ -1,10 +1,10 @@
 import './AddReview.css';
-import { apiUrl } from '../../../../constants';
+import apiUrl from 'constants';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 import axios from 'axios';
-import { useAuth } from '../../../../Hooks/useAuth';
+import { useAuth } from 'Hooks/useAuth';
 import Rating from 'react-rating';
 import { useHistory } from 'react-router';
 

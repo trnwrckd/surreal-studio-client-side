@@ -1,10 +1,10 @@
 import './ManageProducts.css';
 
 import React from 'react';
-import { useProducts } from '../../../../Hooks/useProducts';
+import { useProducts } from 'Hooks/useProducts';
 import { toast, ToastContainer } from 'react-toastify';
 import { confirmAlert } from 'react-confirm-alert';
-import Loading from '../../../../Shared/Loading/Loading';
+import Loading from 'Shared/Loading/Loading';
 
 const ManageProducts = () => {
   const { products, setProducts, productLoaded } = useProducts();

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import authInit from '../Firebase/firebase-init';
+import authInit from 'Firebase/firebase-init';
 import {
   getAuth,
   signInWithPopup,
@@ -12,9 +12,8 @@ import {
 } from 'firebase/auth';
 import axios from 'axios';
 
-import { apiUrl } from '../constants';
+import apiUrl from 'constants';
 
-// initiate authentication
 authInit();
 
 const useFireBase = () => {

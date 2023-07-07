@@ -4,7 +4,7 @@ import React from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
-import { apiUrl } from '../../../../constants';
+import apiUrl from 'constants';
 
 const AddProduct = () => {
   const {

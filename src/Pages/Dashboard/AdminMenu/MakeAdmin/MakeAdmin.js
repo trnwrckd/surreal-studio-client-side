@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { confirmAlert } from 'react-confirm-alert';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
-import { apiUrl } from '../../../../constants';
+import apiUrl from 'constants';
 
 const MakeAdmin = () => {
   const {
