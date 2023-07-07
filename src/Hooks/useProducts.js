@@ -1,17 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { apiUrl } from '../constants';
 
 export const useProducts = () => {
-    const [products, setProducts] = useState([]);
-    const [productLoaded, setProductLoaded] = useState(false);
+  const [products, setProducts] = useState([]);
+  const [productLoaded, setProductLoaded] = useState(false);
 
-    useEffect(() => {
-        fetch('https://infinite-lowlands-70497.herokuapp.com/products')
-            .then(result => result.json())
-            .then(data => {
-                setProducts(data);
-                setProductLoaded(true);
-            });
-    }, []);
-    
-    return { products  , productLoaded, setProducts};
-}
+  console.log(apiUrl);
+
+  useEffect(() => {
+    fetch(`${apiUrl}/products`)
+      .then(result => result.json())
+      .then(data => {
+        setProducts(data);
+        setProductLoaded(true);
+      });
+  }, []);
+
+  return { products, productLoaded, setProducts };
+};
