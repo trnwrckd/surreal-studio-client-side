@@ -1,10 +1,10 @@
-.loader{ 
-    min-height: 100vh;
-    background-color: #fff1f1;
+.loader {
+  min-height: 50vh;
+  background-color: #fff1f1;
 }
 
 @media only screen and (max-width: 992px) {
-    .loader{
-        min-height: 50vh;
-    }
+  .loader {
+    min-height: 50vh;
+  }
 }

@@ -1,42 +1,43 @@
-.art-container{
-    position: relative;
-    overflow: hidden;
+.art-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
 }
-.art-info{
-    position: absolute;
-    cursor: pointer;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    background: rgba(255, 253, 131, 0.473);
-    transition: all .8s;
-    left: -100%;
+.art-info {
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(255, 253, 131, 0.473);
+  transition: all 0.8s;
+  left: -100%;
 }
-.art-info-overlay{
-    color: white;
-    background-color: rgba(0, 0, 0, 0.37);
+.art-info-overlay {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.37);
 }
-.art-container:hover .art-info{
-    left: 0px;
-}
-
-.btn-buy{
-    position: absolute;
-    bottom: 0;
-    color: black;
-    color: black;
-    letter-spacing: 1.2px;
-    font-weight: 500;
-    border: none;
-    background: rgba(255, 158, 146, 0.65);
-    backdrop-filter: blur(10px);
-    border-left: 2px solid black;
-    border-top: 2px solid black;
-    right: 0;
-    padding: 5px 25px;
-    transition: all .5s;
+.art-container:hover .art-info {
+  left: 0px;
 }
 
-.btn-buy:hover{
-    background: rgba(255, 255, 255, 0.664);
+.btn-buy {
+  position: absolute;
+  bottom: 0;
+  color: black;
+  color: black;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  border: none;
+  background: rgba(255, 158, 146, 0.65);
+  backdrop-filter: blur(10px);
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  right: 0;
+  padding: 5px 25px;
+  transition: all 0.5s;
+}
+
+.btn-buy:hover {
+  background: rgba(255, 255, 255, 0.664);
 }
