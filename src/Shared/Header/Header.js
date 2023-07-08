@@ -1,3 +1,4 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useAuth } from 'Hooks/useAuth';
 import LogoutIcon from '@mui/icons-material/Logout';
@@ -5,7 +6,7 @@ import { useHistory } from 'react-router';
 
 import './Header.css';
 
-const Header = () => {
+function Header() {
   const { logOut, user, isLoading } = useAuth();
 
   const history = useHistory();
@@ -30,7 +31,7 @@ const Header = () => {
             aria-expanded='false'
             aria-label='Toggle navigation'
           >
-            <span className='navbar-toggler-icon'></span>
+            <span className='navbar-toggler-icon' />
           </button>
 
           <div className='collapse navbar-collapse' id='navbarSupportedContent'>
@@ -72,7 +73,7 @@ const Header = () => {
                         logOut(history);
                       }}
                     >
-                      <LogoutIcon></LogoutIcon>
+                      <LogoutIcon />
                     </span>
                   </li>
                 </>
@@ -93,6 +94,6 @@ const Header = () => {
       </nav>
     </div>
   );
-};
+}
 
 export default Header;

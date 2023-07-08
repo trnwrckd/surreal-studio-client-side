@@ -1,5 +1,5 @@
 import './AddReview.css';
-import apiUrl from 'constants';
+import { apiUrl } from 'utils/constants';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
@@ -8,7 +8,7 @@ import { useAuth } from 'Hooks/useAuth';
 import Rating from 'react-rating';
 import { useHistory } from 'react-router';
 
-const AddReview = () => {
+function AddReview() {
   const {
     handleSubmit,
     register,
@@ -22,7 +22,7 @@ const AddReview = () => {
 
   const notify = () => toast.info('Review Added Successfully!');
 
-  const handleRatingChange = value => {
+  const handleRatingChange = (value) => {
     const rating = value;
     setRating(rating);
   };
@@ -32,14 +32,14 @@ const AddReview = () => {
     history.push('/home');
   };
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     data.name = user.displayName;
     data.email = user.email;
     data.rating = rating;
     const displayImage = user.photoURL || 'https://i.ibb.co/5rJ3gMz/fakeDP.png';
     data.image = displayImage;
 
-    axios.post(`${apiUrl}/reviews`, data).then(res => {
+    axios.post(`${apiUrl}/reviews`, data).then((res) => {
       if (res.data.insertedId) {
         notify();
         reset();
@@ -49,49 +49,49 @@ const AddReview = () => {
   };
 
   return (
-    <div className='fit'>
+    <div className="fit">
       <h1>Add Review</h1>
-      <div className='d-flex justify-content-center py-3'>
-        <form onSubmit={handleSubmit(onSubmit)} className='w-75'>
+      <div className="d-flex justify-content-center py-3">
+        <form onSubmit={handleSubmit(onSubmit)} className="w-75">
           <ToastContainer />
           {/* name */}
-          <div className='form-floating mb-2'>
+          <div className="form-floating mb-2">
             <input
-              className='form-control px-5'
+              className="form-control px-5"
               defaultValue={user.displayName}
-              type='text'
-              placeholder='Name'
-              id='name'
+              type="text"
+              placeholder="Name"
+              id="name"
               {...register('name')}
             />
-            <label htmlFor='name'>Name</label>
+            <label htmlFor="name">Name</label>
           </div>
 
           {/* email */}
-          <div className='form-floating mb-2'>
+          <div className="form-floating mb-2">
             <input
-              className='form-control px-5'
+              className="form-control px-5"
               defaultValue={user.email}
-              type='email'
-              placeholder='Email'
-              id='email'
+              type="email"
+              placeholder="Email"
+              id="email"
               {...register('email')}
             />
-            <label htmlFor='email'>Email</label>
+            <label htmlFor="email">Email</label>
           </div>
 
           {/* review */}
-          <div className='form-floating mb-2'>
+          <div className="form-floating mb-2">
             <input
-              className='form-control px-5'
-              type='text'
-              placeholder='Review'
-              id='review'
+              className="form-control px-5"
+              type="text"
+              placeholder="Review"
+              id="review"
               {...register('content', { required: 'Review is required' })}
             />
-            <label htmlFor='review'>Review</label>
+            <label htmlFor="review">Review</label>
             {errors.content && (
-              <p className='text-danger fw-bold m-0'>
+              <p className="text-danger fw-bold m-0">
                 {' '}
                 {errors.content.message}
               </p>
@@ -99,26 +99,26 @@ const AddReview = () => {
           </div>
 
           {/* rating */}
-          <div className='d-flex justify-content-center align-items-center'>
-            <h5 className='mx-3'>Rating - </h5>
+          <div className="d-flex justify-content-center align-items-center">
+            <h5 className="mx-3">Rating - </h5>
             <Rating
-              className='mb-2'
+              className="mb-2"
               onChange={handleRatingChange}
               initialRating={rating}
-              emptySymbol='far fa-star icon-color'
-              fullSymbol='fas fa-star icon-color'
-            ></Rating>
+              emptySymbol="far fa-star icon-color"
+              fullSymbol="fas fa-star icon-color"
+            />
           </div>
-          <input type='hidden' {...register('rating')} />
-          <input type='hidden' {...register('image')} />
+          <input type="hidden" {...register('rating')} />
+          <input type="hidden" {...register('image')} />
 
-          <div className='mt-3'>
-            <button className='btn-generic btn-blue'>Proceed</button>
+          <div className="mt-3">
+            <button className="btn-generic btn-blue">Proceed</button>
           </div>
         </form>
       </div>
     </div>
   );
-};
+}
 
 export default AddReview;

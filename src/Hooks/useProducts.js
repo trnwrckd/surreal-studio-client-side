@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import apiUrl from 'constants';
+import { apiUrl } from 'utils/constants';
 
 export const useProducts = () => {
   const [products, setProducts] = useState([]);

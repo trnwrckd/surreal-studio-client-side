@@ -1,10 +1,10 @@
-import "./Banner.css";
+import './Banner.css';
 
-import React from "react";
+import React from 'react';
 
-const Banner = () => {
+function Banner() {
   const scrollDown = () => {
-    let pageHeight = window.innerHeight;
+    const pageHeight = window.innerHeight;
     window.scrollBy(0, pageHeight);
   };
 
@@ -20,13 +20,13 @@ const Banner = () => {
             </div>
             <p className="fs-big mb-4"> Explore Surrealism</p>
             <button className="btn-scrollDown" onClick={scrollDown}>
-              <i className="fas fa-chevron-down"></i>
+              <i className="fas fa-chevron-down" />
             </button>
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Banner;

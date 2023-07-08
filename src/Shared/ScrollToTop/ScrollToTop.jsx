@@ -8,10 +8,10 @@ function ScrollToTop({ history, children }) {
     });
     return () => {
       unlisten();
-    }
+    };
   }, [history]);
 
-  return <Fragment>{children}</Fragment>;
+  return <>{children}</>;
 }
 
 export default withRouter(ScrollToTop);

@@ -12,7 +12,7 @@ import {
 } from 'firebase/auth';
 import axios from 'axios';
 
-import apiUrl from 'constants';
+import { apiUrl } from 'utils/constants';
 
 authInit();
 
@@ -54,7 +54,7 @@ const useFireBase = () => {
   // update username when signed in with email and pass
   const updateName = (name, email, history, redirectURL) => {
     setIsLoading(true);
-    updateProfile(auth.currentUser, { displayName: name }).then(result => {
+    updateProfile(auth.currentUser, { displayName: name }).then(() => {
       saveUser(email, name);
       history.push(redirectURL);
       setIsLoading(false);

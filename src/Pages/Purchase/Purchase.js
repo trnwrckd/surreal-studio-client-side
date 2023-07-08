@@ -2,7 +2,7 @@ import './Purchase.css';
 
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
-import apiUrl from 'constants';
+import { apiUrl } from 'utils/constants';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useAuth } from 'Hooks/useAuth';

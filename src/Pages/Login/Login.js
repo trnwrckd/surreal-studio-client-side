@@ -21,7 +21,7 @@ const Login = () => {
   const { googleSignin, emailSignIn, error } = useAuth();
   const location = useLocation();
 
-  const redirectURL = location.state?.from || '/';
+  const redirectURL = location.state.from ? location.state.from : '/';
 
   const onSubmit = data => {
     clearErrors();
@@ -105,7 +105,7 @@ const Login = () => {
               </div>
             </div>
             <p className='redirect pt-3' onClick={redirectToRegister}>
-              Don't have an account?
+              {"Don't have an account?"}
             </p>
           </div>
         </div>

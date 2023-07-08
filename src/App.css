@@ -4,97 +4,92 @@
 }
 
 /* margin for navbar */
-.mt-nav{
+.mt-nav {
   margin-top: 60px;
 }
 /* padding to fix footer */
-.py-fit{
+.py-fit {
   padding: 7em 0;
 }
-.fit{
+.fit {
   min-height: 80vh;
 }
 /* confirm alert overlay should cover all of the screen */
 
-.react-confirm-alert-overlay{
-    z-index: 9999 !important;
-    background: black !important;
+.react-confirm-alert-overlay {
+  z-index: 9999 !important;
+  background: black !important;
 }
 
 /* for all navigation */
-.bg-nav{
-   background: #141212;
+.bg-nav {
+  background: #141212;
 }
 
 /* text color */
-[data-col]{
-  transition: all .5s;
+[data-col] {
+  transition: all 0.5s;
   cursor: pointer;
 }
-[data-col]:hover{
-  color: white;  
+[data-col]:hover {
+  color: white;
 }
-[data-col = "gold"]{
+[data-col='gold'] {
   color: gold;
 }
-[data-col = "gold"]:hover{
-  color: rgb(255, 136, 67);
-}
-[data-col = "blue"]{
+[data-col='blue'] {
   color: rgb(157, 157, 255);
 }
-[data-col = "blue"]:hover{
-  color: rgb(150, 255, 137);
-}
-[data-col = "dark-blue"]{
+[data-col='dark-blue'] {
   color: rgb(22, 2, 78);
 }
-[data-col = "light-red"]{
+[data-col='light-red'] {
   color: rgb(255, 129, 129);
 }
-[data-col = "light-green"]{
+[data-col='light-green'] {
   color: rgb(167, 255, 171);
 }
-.text-warning{
+.text-warning {
   color: #998281;
 }
 
 /* redirect to reg/login text*/
-.redirect , .redirect-register{
-    color: #ffdb79; 
-    letter-spacing: .5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    /* font-weight: 300; */
-    transition: all .5s;
+.redirect,
+.redirect-register {
+  color: #ffdb79;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  /* font-weight: 300; */
+  transition: all 0.5s;
 }
-.redirect-register{
+.redirect-register {
   color: rgb(152, 255, 148);
 }
-.redirect:hover , .redirect-register:hover{
-    color: rgb(245, 245, 245);
+.redirect:hover,
+.redirect-register:hover {
+  color: rgb(245, 245, 245);
 }
 
 /* generic btn variant */
 
-.btn-generic{
-    background-color: rgb(8, 8, 8);
-    background-color: white;
-    color: black;
-    border: 2px solid black;
-    padding: 5px 20px;
-    font-weight: 400;
-    font-family: "Oswald" , sans-serif !important;
-    letter-spacing: 1.5px;
-    border-radius: 25px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    transition: all .4s;
+.btn-generic {
+  background-color: rgb(8, 8, 8);
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  padding: 5px 20px;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif !important;
+  letter-spacing: 1.5px;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s;
 }
 
-
-.btn-generic:before{
+.btn-generic:before {
   position: absolute;
   content: '';
   width: 100%;
@@ -104,14 +99,14 @@
   top: 0;
   opacity: 0;
   /* border-radius: 0p; */
-  background-color:rgb(255, 230, 92);
-  transition: all .5s;
+  background-color: rgb(255, 230, 92);
+  transition: all 0.5s;
 }
-.btn-generic:hover:before{
+.btn-generic:hover:before {
   left: -50%;
-  opacity: .5;
+  opacity: 0.5;
 }
-.btn-generic:after{
+.btn-generic:after {
   position: absolute;
   content: '';
   width: 100%;
@@ -121,50 +116,47 @@
   top: 0;
   opacity: 0;
   /* border-radius: 0p; */
-  background-color:rgb(136, 167, 255);
-  transition: all .5s;
+  background-color: rgb(136, 167, 255);
+  transition: all 0.5s;
 }
-.btn-generic:hover:after{
+.btn-generic:hover:after {
   right: -50%;
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.btn-submit{
-  transition: all .5s;
+.btn-submit {
+  transition: all 0.5s;
   border-radius: 12px;
 }
-.btn-submit:before{
+.btn-submit:before {
   background-color: rgb(129, 255, 97);
 }
-.btn-submit:after{
+.btn-submit:after {
   background-color: rgb(253, 223, 124);
 }
-.btn-submit:hover{
-  /* text-shadow: 0px 0px 2px rgb(255, 255, 255); */
-}
-
 /* delete and update btn */
 
-.btn-del, .btn-update{
+.btn-del,
+.btn-update {
   border: 2px solid black;
   padding: 3px 10px;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.btn-del{
+.btn-del {
   background-color: rgb(255, 199, 195);
 }
-.btn-update{
+.btn-update {
   background-color: rgb(209, 255, 195);
 }
 
-.btn-del:hover , .btn-update:hover{
+.btn-del:hover,
+.btn-update:hover {
   background-color: rgb(10, 10, 10);
   color: white;
 }
 
-
 /* for Rating */
-.icon-color{
+.icon-color {
   color: #ff1c1c;
 }

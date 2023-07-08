@@ -1,5 +1,6 @@
 import './App.css';
-import Home from 'Pages/Home/Home/Home.js';
+import React from 'react';
+import Home from 'Pages/HomePage/Home/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Register from 'Pages/Register/Register';
 import Login from 'Pages/Login/Login';
@@ -10,7 +11,7 @@ import Explore from 'Pages/Explore/Explore';
 import Purchase from 'Pages/Purchase/Purchase';
 import PrivateRoute from 'PrivateRoute/PrivateRoute';
 import Art from 'Pages/Art/Art';
-import ScrollToTop from 'Shared/ScrollToTop/ScrollToTop';
+import ScrollToTop from 'Shared/ScrollToTop/ScrollToTop.jsx';
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function App() {
               </Route>
 
               <PrivateRoute path='/purchase/:id'>
-                <Purchase></Purchase>
+                <Purchase />
               </PrivateRoute>
 
               <PrivateRoute path='/dashboard'>

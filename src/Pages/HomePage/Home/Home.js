@@ -1,4 +1,4 @@
-import './Home.css'
+import './Home.css';
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Products from '../Products/Products/Products';
@@ -7,19 +7,19 @@ import Header from '../../../Shared/Header/Header';
 import Footer from '../../../Shared/Footer/Footer';
 import Surrealism from '../Surrealism/Surrealism';
 
-const Home = () => {
-    return (
-        <>
-            <Header />
-            <div className="mt-nav">
-                <Banner/>
-                <Products/>
-                <Reviews />
-                <Surrealism/>
-            </div>
-            <Footer/>
-        </>
-    );
-};
+function Home() {
+  return (
+    <>
+      <Header />
+      <div className="mt-nav">
+        <Banner />
+        <Products />
+        <Reviews />
+        <Surrealism />
+      </div>
+      <Footer />
+    </>
+  );
+}
 
 export default Home;
