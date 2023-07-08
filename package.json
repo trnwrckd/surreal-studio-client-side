@@ -31,8 +31,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm build && firebase deploy",
-    "lint" : "eslint ."
+    "deploy": "npm run build && firebase deploy",
+    "lint": "eslint ."
   },
   "eslintConfig": {
     "extends": [
